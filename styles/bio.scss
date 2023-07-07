@@ -1,19 +1,26 @@
 @use './partials/global'; 
-@import './partials/fonts';
+@import './partials/typography';
 @import './partials/variables';
 
 body{
-    font-family: 'Avenir';
+    font-family:'Avenir';
 }
+
+nav{
+    background-color: $primary-color1;
+}
+
 
 .company{
     text-align: center;
+    font-family: 'Avenir';
 }
 
 .nav__links{
     display: flex;
     justify-content: space-around;
 }
+
 
 
 .hero{
@@ -32,9 +39,10 @@ body{
 }
 
 
-
-
-
+footer{
+    @extend nav;
+    
+}
 
 
 
