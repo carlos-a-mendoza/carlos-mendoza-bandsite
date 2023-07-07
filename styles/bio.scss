@@ -1,1 +1,45 @@
-@use './partials/global' as *;
+@use './partials/global'; 
+@import './partials/fonts';
+@import './partials/variables';
+
+body{
+    font-family: 'Avenir';
+}
+
+.company{
+    text-align: center;
+}
+
+.nav__links{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.hero{
+    background-image: url("../Assets/Images/hero-bio.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: calc(0.5*100vw);
+    
+    display: flex;
+    align-items: center;
+
+    &__title{
+        color: $primary-color3;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
