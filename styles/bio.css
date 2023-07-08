@@ -16,8 +16,8 @@ li, a {
   font-weight: 400;
 }
 @font-face {
-  font-family: "Avenir-Demi", "sans-serif";
-  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf"), url("../Assets/Font/Alternative files/AvenirNextLTPro-Demi");
+  font-family: "Avenir-Demi";
+  src: url("../Assets/Font/AvenirNextLTPro-Demi.woff") format "woff", url "../../Assets/Font/AvenirNextLTPro-Demi.woff2" format "woff2";
   font-style: normal;
   font-weight: 600;
 }
@@ -38,11 +38,17 @@ nav, footer {
 .company {
   text-align: center;
   font-family: "Avenir";
+  color: #FFFFFF;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .nav__links {
   display: flex;
   justify-content: space-around;
+  color: #FFFFFF;
+  padding-bottom: 1rem;
+  font-family: "Avenir-Demi";
 }
 
 .hero {
@@ -56,4 +62,14 @@ nav, footer {
 }
 .hero__title {
   color: #FFFFFF;
+}
+
+.about__image {
+  width: 95vw;
+  height: 47.5vw;
+}
+
+.gallery__image {
+  width: 80vw;
+  height: 40vw;
 }/*# sourceMappingURL=bio.css.map */

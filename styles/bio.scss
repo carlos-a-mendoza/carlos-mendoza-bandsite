@@ -10,18 +10,21 @@ nav{
     background-color: $primary-color1;
 }
 
-
 .company{
     text-align: center;
     font-family: 'Avenir';
+    color: $primary-color3;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .nav__links{
     display: flex;
     justify-content: space-around;
+    color: $primary-color3;
+    padding-bottom: 1rem;
+    font-family: 'Avenir-Demi';
 }
-
-
 
 .hero{
     background-image: url("../Assets/Images/hero-bio.jpg");
@@ -36,6 +39,17 @@ nav{
     &__title{
         color: $primary-color3;
     }
+}
+
+
+.about__image{
+    width: 95vw;
+    height: calc(0.5*95vw);
+}
+
+.gallery__image{
+    width: 80vw;
+    height: calc(0.5*80vw);
 }
 
 

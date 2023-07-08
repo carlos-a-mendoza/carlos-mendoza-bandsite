@@ -8,9 +8,10 @@
 }
 
 @font-face{
-    font-family: 'Avenir-Demi', 'sans-serif';
-    src: url('../Assets/Font/AvenirNextLTPro-Demi.otf'),
-    url('../Assets/Font/Alternative\ files/AvenirNextLTPro-Demi');
+    font-family: 'Avenir-Demi';
+    src: url('../Assets/Font/AvenirNextLTPro-Demi.woff') format ('woff'),
+    url ('../../Assets/Font/AvenirNextLTPro-Demi.woff2') format ('woff2');
+    // url('../Assets/Font/AvenirNextLTPro-Demi.otf') format ('otf');
     font-style: normal;
     font-weight: 600;
 }
