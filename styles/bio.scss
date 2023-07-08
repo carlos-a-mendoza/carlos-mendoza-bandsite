@@ -13,20 +13,24 @@ nav{
 
 .company{
     text-align: center;
-    color: $primary-color3;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
 }
 
 .nav__container{
     display: flex;
-    justify-content: space-around;
-    color: $primary-color3;
-    padding-bottom: 1rem;
+    justify-content: center;
+
+}
+
+.nav__links{
+    width: 50%;
+    text-align: center;
 }
 
 .nav__links--highlight{
-    border-bottom: 
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #FFFFFF;
 }
 
 .hero{
@@ -34,56 +38,105 @@ nav{
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: calc(0.5*100vw);
+    height: calc(0.55*100vw);
     
     display: flex;
     align-items: center;
 
     &__title{
         color: $primary-color3;
+        padding-left: 1rem;
     }
 }
 
+.section__heading, .narrative__title{
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.about, .narrative, .gallery, footer{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.narrative__description{
+    padding-bottom: 1rem;
+}
 
 .about__image{
-    width: 95vw;
+    width: 85vw;
     height: calc(0.5*95vw);
 }
 
 .gallery__image{
-    width: 80vw;
-    height: calc(0.5*80vw);
+    width: 85vw;
+    height: calc(0.65*80vw);
+    padding-bottom: 0.5rem,
 }
-
 
 footer{
     @extend nav;
-    
+    padding-top: 1rem;
 }
 
+.socials__logo{
+    padding-right: 1.5rem;
+}
 
-// Font Weight and Font Styles
+.contact, .contact__name, .contact__info, .contact__email{
+    padding-top: 0.7rem;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2.5rem;
+}
+
+// Font Weight, Font Styles and Font Size
+
+.hero__title, .section__heading, .nav__links--highlight, .about__description, .narrative__description{
+    font-family: 'Avenir-Demi';
+}
+
+.contact__name{
+    font-family: 'Avenir-Bold';
+}
 
 .company{
-    font-size: 1.6rem;
-    font-weight: 400;
+    font-size: 1.4rem;
 }
 
-
-
-.nav__links--highlight{
-    font-family: 'Avenir-Demi'
+.hero__title, .section__heading {
+    font-size: 1.3rem;
 }
 
-.nav__links--highlight{
-    font-size: 0.9rem;
-    font-weight: 200,
+.nav__links--highlight, .nav__links{
+    font-size: 0.65rem;
+}
+
+.narrative__title, .about__description{
+    font-size: 0.8rem;
+}
+
+.narrative__description, .contact{
+    font-size: 0.7rem;
+}
+
+.copyright{
+    font-size: 0.6rem;
 }
 
 // Font Color and Background Colour
 
+.nav__links{
+    color: $primary-color3;
+}
 
-
+.nav__links--highlight, .company, .contact, .copyright, .section__heading--footer{
+    color: $primary-color3;
+}
 
 
 

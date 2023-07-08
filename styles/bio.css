@@ -12,20 +12,14 @@ li, a {
 @font-face {
   font-family: "Avenir";
   src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
-  font-style: normal;
-  font-weight: 400;
 }
 @font-face {
   font-family: "Avenir-Demi";
   src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
-  font-style: normal;
-  font-weight: 600;
 }
 @font-face {
   font-family: "Avenir-Bold";
   src: url("../Assets/Font/AvenirNextLTPro-Bold.otf");
-  font-style: normal;
-  font-weight: 700;
 }
 body {
   font-family: "Avenir";
@@ -37,16 +31,23 @@ nav, footer {
 
 .company {
   text-align: center;
-  color: #FFFFFF;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
 
 .nav__container {
   display: flex;
-  justify-content: space-around;
-  color: #FFFFFF;
-  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+.nav__links {
+  width: 50%;
+  text-align: center;
+}
+
+.nav__links--highlight {
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #FFFFFF;
 }
 
 .hero {
@@ -54,34 +55,95 @@ nav, footer {
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 50vw;
+  height: 55vw;
   display: flex;
   align-items: center;
 }
 .hero__title {
   color: #FFFFFF;
+  padding-left: 1rem;
+}
+
+.section__heading, .narrative__title {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.about, .narrative, .gallery, footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.narrative__description {
+  padding-bottom: 1rem;
 }
 
 .about__image {
-  width: 95vw;
+  width: 85vw;
   height: 47.5vw;
 }
 
 .gallery__image {
-  width: 80vw;
-  height: 40vw;
+  width: 85vw;
+  height: 52vw;
+  padding-bottom: 0.5rem;
 }
 
-.company {
-  font-size: 1.6rem;
-  font-weight: 400;
+footer {
+  padding-top: 1rem;
 }
 
-.nav__links--highlight {
+.socials__logo {
+  padding-right: 1.5rem;
+}
+
+.contact, .contact__name, .contact__info, .contact__email {
+  padding-top: 0.7rem;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2.5rem;
+}
+
+.hero__title, .section__heading, .nav__links--highlight, .about__description, .narrative__description {
   font-family: "Avenir-Demi";
 }
 
-.nav__links--highlight {
-  font-size: 0.9rem;
-  font-weight: 200;
+.contact__name {
+  font-family: "Avenir-Bold";
+}
+
+.company {
+  font-size: 1.4rem;
+}
+
+.hero__title, .section__heading {
+  font-size: 1.3rem;
+}
+
+.nav__links--highlight, .nav__links {
+  font-size: 0.65rem;
+}
+
+.narrative__title, .about__description {
+  font-size: 0.8rem;
+}
+
+.narrative__description, .contact {
+  font-size: 0.7rem;
+}
+
+.copyright {
+  font-size: 0.6rem;
+}
+
+.nav__links {
+  color: #FFFFFF;
+}
+
+.nav__links--highlight, .company, .contact, .copyright, .section__heading--footer {
+  color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */
