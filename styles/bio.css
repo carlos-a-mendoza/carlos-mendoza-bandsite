@@ -60,7 +60,6 @@ nav, footer {
   align-items: center;
 }
 .hero__title {
-  color: #FFFFFF;
   padding-left: 1rem;
 }
 
@@ -74,18 +73,33 @@ nav, footer {
   padding-right: 1rem;
 }
 
+.narrative__title {
+  padding-top: 1.5rem;
+}
+
 .narrative__description {
   padding-bottom: 1rem;
 }
 
-.about__image {
-  width: 85vw;
-  height: 47.5vw;
+.about__image, .gallery__image {
+  width: 91vw;
+  height: 45.5vw;
+}
+
+.about__description {
+  padding-top: 0.5rem;
+  word-spacing: 0.27rem;
+  line-height: 1.5rem;
+}
+
+.narrative__description {
+  line-height: 1.2rem;
+  padding-top: 0.5rem;
+  width: 92%;
 }
 
 .gallery__image {
-  width: 85vw;
-  height: 52vw;
+  height: 50.05vw;
   padding-bottom: 0.5rem;
 }
 
@@ -108,42 +122,39 @@ footer {
   padding-top: 2.5rem;
 }
 
-.hero__title, .section__heading, .nav__links--highlight, .about__description, .narrative__description {
+.hero, .section__heading, .nav__links--highlight, .about__description, .narrative__description, .contact__name {
   font-family: "Avenir-Demi";
 }
 
-.contact__name {
-  font-family: "Avenir-Bold";
-}
-
 .company {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .hero__title, .section__heading {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .nav__links--highlight, .nav__links {
-  font-size: 0.65rem;
+  font-size: 0.9rem;
 }
 
-.narrative__title, .about__description {
-  font-size: 0.8rem;
+.about__description, .narrative__title {
+  font-size: 0.9rem;
 }
 
 .narrative__description, .contact {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
 }
 
 .copyright {
   font-size: 0.6rem;
 }
 
-.nav__links {
+.nav__links, .nav__links--highlight, .hero__title, .company, .contact, .copyright, .section__heading--footer {
   color: #FFFFFF;
 }
 
-.nav__links--highlight, .company, .contact, .copyright, .section__heading--footer {
-  color: #FFFFFF;
+.gallery {
+  background-color: #FAFAFA;
 }/*# sourceMappingURL=bio.css.map */

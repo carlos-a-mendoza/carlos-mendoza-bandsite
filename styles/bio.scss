@@ -44,7 +44,6 @@ nav{
     align-items: center;
 
     &__title{
-        color: $primary-color3;
         padding-left: 1rem;
     }
 }
@@ -59,19 +58,40 @@ nav{
     padding-right: 1rem;
 }
 
+.narrative__title{
+    padding-top: 1.5rem;
+}
+
 .narrative__description{
     padding-bottom: 1rem;
+
 }
 
 .about__image{
-    width: 85vw;
-    height: calc(0.5*95vw);
+    width: 91vw;
+    height: calc(0.50*91vw);
+}
+
+.about__description{
+    padding-top: 0.5rem;
+    word-spacing: 0.27rem;
+    line-height: 1.5rem;
+}
+
+.narrative__description{
+    line-height: 1.2rem;
+    padding-top: 0.5rem;
+    // letter-spacing: 0.03rem;
+    width: 92%;
+        
+    
 }
 
 .gallery__image{
-    width: 85vw;
-    height: calc(0.65*80vw);
-    padding-bottom: 0.5rem,
+    @extend .about__image;
+    height: calc(0.55*91vw);
+    padding-bottom: 0.5rem;
+    
 }
 
 footer{
@@ -96,32 +116,29 @@ footer{
 
 // Font Weight, Font Styles and Font Size
 
-.hero__title, .section__heading, .nav__links--highlight, .about__description, .narrative__description{
+.hero, .section__heading, .nav__links--highlight, .about__description, .narrative__description, .contact__name{
     font-family: 'Avenir-Demi';
 }
 
-.contact__name{
-    font-family: 'Avenir-Bold';
-}
-
 .company{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    font-weight:400;
 }
 
 .hero__title, .section__heading {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .nav__links--highlight, .nav__links{
-    font-size: 0.65rem;
+    font-size: 0.9rem;
 }
 
-.narrative__title, .about__description{
-    font-size: 0.8rem;
+.about__description, .narrative__title{
+    font-size: 0.9rem;
 }
 
 .narrative__description, .contact{
-    font-size: 0.7rem;
+    font-size: 0.85rem;
 }
 
 .copyright{
@@ -130,14 +147,12 @@ footer{
 
 // Font Color and Background Colour
 
-.nav__links{
+.nav__links, .nav__links--highlight, .hero__title, .company, .contact, .copyright, .section__heading--footer{
     color: $primary-color3;
 }
 
-.nav__links--highlight, .company, .contact, .copyright, .section__heading--footer{
-    color: $primary-color3;
+.gallery{
+    background-color: $secondary-color3;
 }
-
-
 
 
