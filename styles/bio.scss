@@ -2,6 +2,7 @@
 @import './partials/typography';
 @import './partials/variables';
 
+
 body{
     font-family:'Avenir';
 }
@@ -12,18 +13,20 @@ nav{
 
 .company{
     text-align: center;
-    font-family: 'Avenir';
     color: $primary-color3;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
 }
 
-.nav__links{
+.nav__container{
     display: flex;
     justify-content: space-around;
     color: $primary-color3;
     padding-bottom: 1rem;
-    font-family: 'Avenir-Demi';
+}
+
+.nav__links--highlight{
+    border-bottom: 
 }
 
 .hero{
@@ -58,6 +61,26 @@ footer{
     
 }
 
+
+// Font Weight and Font Styles
+
+.company{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+
+
+.nav__links--highlight{
+    font-family: 'Avenir-Demi'
+}
+
+.nav__links--highlight{
+    font-size: 0.9rem;
+    font-weight: 200,
+}
+
+// Font Color and Background Colour
 
 
 
