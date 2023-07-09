@@ -63,10 +63,16 @@ nav{
     display: flex;
     align-items: center;
 
+    @include mixins.tablet{
+        width: 100vw;
+        height: calc(0.6*100vw);
+    }
+
     &__title{
         padding-left: 1rem;
 
         @include mixins.tablet{
+        padding-top: 3rem;
         padding-left: 2rem;
         }
     }
@@ -77,8 +83,8 @@ nav{
     padding-bottom: 0.5rem;
 
     @include mixins.tablet{
-        padding-top: 2rem;
-        padding-bottom: 1rem;
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -110,17 +116,19 @@ nav{
     width: 91vw;
     height: calc(0.50*89vw);
     @include mixins.tablet{
-        width: 85%;
+        width: 80%;
         height: calc(0.5*85vw)
     }
 }
 
 .about__description{
     padding-top: 0.5rem;
-    word-spacing: 0.01rem;
+    word-spacing: 0.1rem;
     line-height: 1.3rem;
     @include mixins.tablet{
-        width: 85%;
+        width: 80%;
+        padding-top: 2rem;
+        line-height: 1.8rem;
     }
 }
 
@@ -128,7 +136,8 @@ nav{
     padding-top: 0.3rem;
     line-height: 1.3rem;
     @include mixins.tablet{
-        width: 85%;
+        width: 80%;
+        padding-top: 1rem;
     }
 }
 
@@ -143,14 +152,15 @@ nav{
 .narrative__title{
     padding-top: 1.5rem;
     @include mixins.tablet{
-        width: 85%;
+        width: 80%;
     }
 }
 
 .narrative__container{
     @include mixins.tablet{
         display: flex;
-        width: 85%;
+        width: 80%;
+        justify-content: space-between;
     }
 }
 
@@ -160,8 +170,20 @@ nav{
     padding-bottom: 1rem;
     width: 94%;
     @include mixins.tablet{
-        width: 80%;
-        padding-right: 2.5rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.0001rem;
+    }
+}
+
+.narrative__description--left{
+    @include mixins.tablet{
+        padding-right:1rem;
+    }
+}
+
+.narrative__description--right{
+    @include mixins.tablet{
+        padding-left:1rem;
     }
 }
 
@@ -181,7 +203,9 @@ footer{
     padding-top: 1rem;
     @include mixins.tablet{
         display: flex;
-        flex-direction: column;
+        flex-flow: wrap;
+        justify-content: space-between;
+        padding-top: 0;
     }
 }
 
@@ -189,6 +213,7 @@ footer{
     @include mixins.tablet{
         display: flex;
         align-items: center;
+        order:-2;
     }
 }
 
@@ -207,8 +232,12 @@ footer{
     @include mixins.tablet{
         display: flex;
         justify-content: space-between;
+        order:1;
+        flex-grow: 100;
+        width: 100%;
     }
 }
+
 .contact, .contact__name, .contact__info, .contact__email{
     padding-top: 0.7rem;
     line-height: 1.2rem;;
@@ -221,13 +250,28 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 0.5rem;
+    word-spacing: 0.1rem;
+
+    @include mixins.tablet{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        order: 2;
+    }
+}
+
+.company__container{
+    display: flex;
     padding-top: 2.5rem;
-    word-spacing: 0.1rem;;
+    @include mixins.tablet{
+       padding-top: 2.5rem;
+       order: -1;
+    }
 }
 
 .copyright__description{
     padding-top: 0.2rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 // Font Weight, Font Styles and Font Size
@@ -248,30 +292,73 @@ footer{
 
 .hero__title, .section__heading {
     font-size: 1.5rem;
+    @include mixins.tablet{
+        font-size: 3.85rem;   
+    }
+}
+
+.section__heading{
+    @include mixins.tablet{
+        font-size: 2.3rem;
+    }
 }
 
 .about__description, .about__description--artist, .narrative__title{
     font-size: 0.875rem;
 }
 
+.about__description{
+    @include mixins.tablet{
+        font-size: 1.3rem;
+    }
+
+    &--artist{
+        @include mixins.tablet{
+            font-size: 1.036rem;
+        }
+    }
+}
+
+.narrative__title{
+    @include mixins.tablet{
+        font-size: 1.4rem;
+    }
+}
+
 .narrative__description{
     font-size: 0.8rem;
+    @include mixins.tablet{
+        font-size: 0.815rem;
+    }
 }
 
 .contact__name{
     font-size: 0.77rem;
+    @include mixins.tablet{
+        font-size: 0.82rem;
+    }
 }
 
 .contact__info, .contact__email{
     font-size: 0.76rem;
+    @include mixins.tablet{
+        font-size: 0.81rem;
+    }
 }
 
 .nav__links--highlight, .nav__links{
     font-size: 0.74rem;
+    @include mixins.tablet{
+        font-size: 0.9rem;
+    }
 }
 
 .copyright{
     font-size: 0.67rem;
+    @include mixins.tablet{
+        justify-content: flex-end;
+        font-size: 0.84rem;
+    }
 }
 
 // Font Color and Background Colour
