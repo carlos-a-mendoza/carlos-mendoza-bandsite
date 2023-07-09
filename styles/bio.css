@@ -34,6 +34,12 @@ body {
     padding-top: 0.5rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  nav {
+    padding-left: 10rem;
+    padding-top: 2rem;
+  }
+}
 
 .company {
   text-align: center;
@@ -43,6 +49,11 @@ body {
 @media (min-width: 768px) {
   .company {
     padding-bottom: 1rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .company {
+    padding-bottom: 2rem;
   }
 }
 
@@ -56,15 +67,26 @@ body {
     padding-left: 3.5rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .nav__container {
+    padding-left: 4rem;
+  }
+}
 
 .nav__links {
   width: 50%;
   text-align: center;
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .nav__links {
+    padding-bottom: 2.25rem;
+    padding-top: 1rem;
+  }
+}
 
 .nav__links--highlight {
   padding-bottom: 0.5rem;
-  border-bottom: 4px solid #FFFFFF;
+  border-bottom: 5px solid #FFFFFF;
 }
 @media (min-width: 768px) {
   .nav__links--highlight {
@@ -72,6 +94,12 @@ body {
     padding-top: 1.5rem;
     margin-right: 3rem;
     letter-spacing: 0.02rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .nav__links--highlight {
+    padding-bottom: 2.25rem;
+    padding-top: 1.25rem;
   }
 }
 
@@ -90,6 +118,11 @@ body {
     height: 60vw;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .hero {
+    height: 55vw;
+  }
+}
 .hero__title {
   padding-left: 1rem;
 }
@@ -97,6 +130,13 @@ body {
   .hero__title {
     padding-top: 3rem;
     padding-left: 2rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .hero__title {
+    padding-top: 0rem;
+    padding-left: 10rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -121,11 +161,23 @@ body {
     padding-right: 2rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .about, .narrative, .gallery, footer {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
 
 @media (min-width: 768px) {
   .gallery {
     padding-left: 2rem;
     padding-right: 0.5rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .gallery {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 }
 
@@ -160,6 +212,12 @@ body {
     line-height: 1.8rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .about__description {
+    padding-right: 17rem;
+    line-height: 2.5rem;
+  }
+}
 
 .about__description--artist {
   padding-top: 0.3rem;
@@ -188,6 +246,11 @@ body {
     width: 80%;
   }
 }
+@media (min-width: 768px) {
+  .narrative__title {
+    padding-top: 4rem;
+  }
+}
 
 @media (min-width: 768px) {
   .narrative__container {
@@ -209,16 +272,32 @@ body {
     letter-spacing: 0.0001rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .narrative__description {
+    line-height: 2rem;
+    letter-spacing: 0rem;
+  }
+}
 
 @media (min-width: 768px) {
   .narrative__description--left {
     padding-right: 1rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .narrative__description--left {
+    padding-right: 1.5rem;
+  }
+}
 
 @media (min-width: 768px) {
   .narrative__description--right {
     padding-left: 1rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .narrative__description--right {
+    padding-left: 1.5rem;
   }
 }
 
@@ -232,6 +311,12 @@ body {
     height: 16.64vw;
     padding-bottom: 1rem;
     padding-right: 1rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .gallery__image {
+    padding-bottom: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -260,10 +345,21 @@ footer {
     padding-left: 2rem;
   }
 }
+@media (min-width: 768px) {
+  .socials {
+    padding-left: 8.5rem;
+  }
+}
 
 .socials__logo {
   padding-right: 2rem;
   margin-top: 1rem;
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .socials__logo {
+    width: 5rem;
+    height: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -271,8 +367,12 @@ footer {
     display: flex;
     justify-content: space-between;
     order: 1;
-    flex-grow: 100;
     width: 100%;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .contact__container {
+    justify-content: flex-start;
   }
 }
 
@@ -283,6 +383,12 @@ footer {
 @media (min-width: 768px) {
   .contact, .contact__name, .contact__info, .contact__email {
     padding-top: 1rem;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .contact {
+    padding-right: 10rem;
   }
 }
 
@@ -298,6 +404,11 @@ footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
     order: 2;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .copyright {
+    padding-top: 3rem;
   }
 }
 
@@ -329,6 +440,11 @@ footer {
   font-size: 1.55rem;
   font-weight: 400;
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .company {
+    font-size: 2.4rem;
+  }
+}
 
 .hero__title, .section__heading {
   font-size: 1.5rem;
@@ -338,10 +454,20 @@ footer {
     font-size: 3.85rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .hero__title, .section__heading {
+    font-size: 6rem;
+  }
+}
 
 @media (min-width: 768px) {
   .section__heading {
     font-size: 2.3rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .section__heading {
+    font-size: 3.65rem;
   }
 }
 
@@ -355,14 +481,29 @@ footer {
   }
 }
 @media (min-width: 768px) {
+  .about__description {
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 768px) {
   .about__description--artist {
     font-size: 1.036rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .about__description--artist {
+    font-size: 1.62rem;
   }
 }
 
 @media (min-width: 768px) {
   .narrative__title {
     font-size: 1.4rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .narrative__title {
+    font-size: 2.4rem;
   }
 }
 
@@ -374,6 +515,11 @@ footer {
     font-size: 0.815rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .narrative__description {
+    font-size: 1.379rem;
+  }
+}
 
 .contact__name {
   font-size: 0.77rem;
@@ -381,6 +527,13 @@ footer {
 @media (min-width: 768px) {
   .contact__name {
     font-size: 0.82rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .contact__name {
+    font-size: 1.38rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.001rem;
   }
 }
 
@@ -392,6 +545,13 @@ footer {
     font-size: 0.81rem;
   }
 }
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .contact__info, .contact__email {
+    font-size: 1.37rem;
+    line-height: 1.8rem;
+    padding-top: 2.5rem;
+  }
+}
 
 .nav__links--highlight, .nav__links {
   font-size: 0.74rem;
@@ -399,6 +559,11 @@ footer {
 @media (min-width: 768px) {
   .nav__links--highlight, .nav__links {
     font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .nav__links--highlight, .nav__links {
+    font-size: 1.5rem;
   }
 }
 
@@ -409,6 +574,11 @@ footer {
   .copyright {
     justify-content: flex-end;
     font-size: 0.84rem;
+  }
+}
+@media (min-width: 768px) {
+  .copyright {
+    font-size: 1.36rem;
   }
 }
 

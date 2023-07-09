@@ -17,6 +17,10 @@ nav{
         padding-left: 2rem;
         padding-top: 0.5rem;
     }
+    @include mixins.desktop{
+        padding-left: 10rem;
+        padding-top: 2rem;
+    }
 }
 
 .company{
@@ -25,6 +29,9 @@ nav{
     padding-bottom: 0.5rem;
     @include mixins.tablet{
         padding-bottom: 1rem;
+    }
+    @include mixins.desktop{
+        padding-bottom: 2rem;
     }
 }
 
@@ -36,21 +43,32 @@ nav{
         align-items: center;
         padding-left: 3.5rem;
     }
+    @include mixins.desktop{
+        padding-left: 4rem;
+    }
 }
 
 .nav__links{
     width: 50%;
     text-align: center;
+    @include mixins.desktop{
+        padding-bottom: 2.25rem;
+        padding-top: 1rem;
+    }
 }
 
 .nav__links--highlight{
     padding-bottom: 0.5rem;
-    border-bottom: 4px solid #FFFFFF;
+    border-bottom: 5px solid #FFFFFF;
     @include mixins.tablet{
         padding-bottom: 1.5rem;
         padding-top: 1.5rem;
         margin-right: 3rem;
         letter-spacing: 0.02rem;
+    }
+    @include mixins.desktop{
+        padding-bottom: 2.25rem;
+        padding-top: 1.25rem;
     }
 }
 
@@ -68,12 +86,22 @@ nav{
         height: calc(0.6*100vw);
     }
 
+    @include mixins.desktop{
+        height: calc(0.55*100vw);
+    }
+
     &__title{
         padding-left: 1rem;
 
         @include mixins.tablet{
         padding-top: 3rem;
         padding-left: 2rem;
+        }
+
+        @include mixins.desktop{
+        padding-top: 0rem;
+        padding-left: 10rem;
+        padding-bottom: 3rem;
         }
     }
 }
@@ -95,6 +123,11 @@ nav{
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    @include mixins.desktop{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
 }
 
 .gallery{
@@ -102,13 +135,17 @@ nav{
         padding-left: 2rem;
         padding-right: 0.5rem;
     }
+    @include mixins.desktop{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
 }
 
 .about__container{
     @include mixins.tablet{
         display: flex;
         flex-direction: column;
-        align-items: center
+        align-items: center;
     }
 }
 
@@ -129,6 +166,10 @@ nav{
         width: 80%;
         padding-top: 2rem;
         line-height: 1.8rem;
+    }
+    @include mixins.desktop{
+        padding-right: 17rem;
+        line-height: 2.5rem;
     }
 }
 
@@ -154,6 +195,9 @@ nav{
     @include mixins.tablet{
         width: 80%;
     }
+    @include mixins.tablet{
+        padding-top: 4rem;
+    }
 }
 
 .narrative__container{
@@ -173,17 +217,27 @@ nav{
         line-height: 1.2rem;
         letter-spacing: 0.0001rem;
     }
+    @include mixins.desktop{
+        line-height: 2rem;
+        letter-spacing: 0rem;
+    }
 }
 
 .narrative__description--left{
     @include mixins.tablet{
         padding-right:1rem;
     }
+    @include mixins.desktop{
+        padding-right:1.5rem;
+    }
 }
 
 .narrative__description--right{
     @include mixins.tablet{
         padding-left:1rem;
+    }
+    @include mixins.desktop{
+        padding-left:1.5rem;
     }
 }
 
@@ -196,6 +250,10 @@ nav{
         height: calc(0.52*32vw);
         padding-bottom: 1rem;
         padding-right: 1rem;
+    }
+    @include mixins.desktop{
+        padding-bottom: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -221,11 +279,18 @@ footer{
     @include mixins.tablet{
         padding-left: 2rem;
     }
+    @include mixins.tablet{
+        padding-left: 8.5rem;
+    }
 }
 
 .socials__logo{
     padding-right: 2rem;
     margin-top: 1rem;
+    @include mixins.desktop{
+        width: 5rem;
+        height: 2.5rem;
+    }
 }
 
 .contact__container{
@@ -233,8 +298,10 @@ footer{
         display: flex;
         justify-content: space-between;
         order:1;
-        flex-grow: 100;
         width: 100%;
+    }
+    @include mixins.desktop{
+        justify-content: flex-start
     }
 }
 
@@ -243,6 +310,12 @@ footer{
     line-height: 1.2rem;;
     @include mixins.tablet{
         padding-top: 1rem;
+    }
+}
+
+.contact{
+    @include mixins.desktop{
+        padding-right: 10rem;
     }
 }
 
@@ -257,6 +330,10 @@ footer{
         padding-top: 2rem;
         padding-bottom: 2rem;
         order: 2;
+    }
+
+    @include mixins.desktop{
+        padding-top: 3rem;
     }
 }
 
@@ -288,6 +365,9 @@ footer{
 .company{
     font-size: 1.55rem;
     font-weight:400;
+    @include mixins.desktop{
+        font-size: 2.4rem;   
+    }
 }
 
 .hero__title, .section__heading {
@@ -295,11 +375,17 @@ footer{
     @include mixins.tablet{
         font-size: 3.85rem;   
     }
+    @include mixins.desktop{
+        font-size: 6rem;   
+    }
 }
 
 .section__heading{
     @include mixins.tablet{
         font-size: 2.3rem;
+    }
+    @include mixins.desktop{
+        font-size: 3.65rem;
     }
 }
 
@@ -311,10 +397,17 @@ footer{
     @include mixins.tablet{
         font-size: 1.3rem;
     }
+    @include mixins.tablet{
+        font-size: 2.1rem;
+    }
 
     &--artist{
         @include mixins.tablet{
             font-size: 1.036rem;
+        }
+
+        @include mixins.desktop{
+            font-size: 1.62rem;
         }
     }
 }
@@ -323,12 +416,18 @@ footer{
     @include mixins.tablet{
         font-size: 1.4rem;
     }
+    @include mixins.desktop{
+        font-size: 2.4rem;
+    }
 }
 
 .narrative__description{
     font-size: 0.8rem;
     @include mixins.tablet{
         font-size: 0.815rem;
+    }
+    @include mixins.desktop{
+        font-size: 1.379rem;
     }
 }
 
@@ -337,12 +436,22 @@ footer{
     @include mixins.tablet{
         font-size: 0.82rem;
     }
+    @include mixins.desktop{
+        font-size: 1.38rem;
+        line-height: 1.8rem;
+        letter-spacing: 0.001rem;
+    }
 }
 
 .contact__info, .contact__email{
     font-size: 0.76rem;
     @include mixins.tablet{
         font-size: 0.81rem;
+    }
+    @include mixins.desktop{
+        font-size: 1.37rem;
+        line-height: 1.8rem;
+        padding-top: 2.5rem;
     }
 }
 
@@ -351,6 +460,9 @@ footer{
     @include mixins.tablet{
         font-size: 0.9rem;
     }
+    @include mixins.desktop{
+        font-size: 1.5rem;
+    }
 }
 
 .copyright{
@@ -358,6 +470,9 @@ footer{
     @include mixins.tablet{
         justify-content: flex-end;
         font-size: 0.84rem;
+    }
+    @include mixins.tablet{
+        font-size: 1.36rem;
     }
 }
 
