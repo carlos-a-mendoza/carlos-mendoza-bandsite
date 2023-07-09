@@ -37,7 +37,7 @@ nav{
     background-image: url("../Assets/Images/hero-bio.jpg");
     background-size: cover;
     background-position: center;
-    width: 100vw;
+    width: 99vw;
     height: calc(0.55*100vw);
     
     display: flex;
@@ -49,7 +49,7 @@ nav{
 }
 
 .section__heading, .narrative__title{
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     padding-bottom: 0.5rem;
 }
 
@@ -68,28 +68,25 @@ nav{
 }
 
 .about__image{
-    width: 91vw;
-    height: calc(0.50*91vw);
+    width: 89vw;
+    height: calc(0.50*89vw);
 }
 
 .about__description{
     padding-top: 0.5rem;
-    word-spacing: 0.27rem;
+    word-spacing: 0.19rem;
     line-height: 1.5rem;
 }
 
 .narrative__description{
     line-height: 1.2rem;
-    padding-top: 0.5rem;
-    // letter-spacing: 0.03rem;
-    width: 92%;
-        
-    
+    padding-top: 0.2rem;
+    width: 89%;
 }
 
 .gallery__image{
     @extend .about__image;
-    height: calc(0.55*91vw);
+    height: calc(0.52*91vw);
     padding-bottom: 0.5rem;
     
 }
@@ -100,11 +97,13 @@ footer{
 }
 
 .socials__logo{
-    padding-right: 1.5rem;
+    padding-right: 2rem;
+    margin-top: 1rem;
 }
 
 .contact, .contact__name, .contact__info, .contact__email{
     padding-top: 0.7rem;
+    line-height: 1.2rem;;
 }
 
 .copyright{
@@ -112,12 +111,22 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     padding-top: 2.5rem;
+    word-spacing: 0.1rem;;
+}
+
+.copyright__description{
+    padding-top: 0.2rem;
+    padding-bottom: 0.5rem;
 }
 
 // Font Weight, Font Styles and Font Size
 
 .hero, .section__heading, .nav__links--highlight, .about__description, .narrative__description, .contact__name{
     font-family: 'Avenir-Demi';
+}
+
+.contact__name{
+    font-family: 'Avenir-Bold';
 }
 
 .company{
@@ -134,15 +143,15 @@ footer{
 }
 
 .about__description, .narrative__title{
-    font-size: 0.9rem;
+    font-size: 0.92rem;
 }
 
 .narrative__description, .contact{
-    font-size: 0.85rem;
+    font-size: 0.842rem;
 }
 
 .copyright{
-    font-size: 0.6rem;
+    font-size: 0.67rem;
 }
 
 // Font Color and Background Colour
