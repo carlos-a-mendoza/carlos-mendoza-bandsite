@@ -1,7 +1,9 @@
 @use './partials/global'; 
+@use './partials/mixins';
 @import './partials/typography';
 @import './partials/variables';
 
+// Initial mobile device size at 320px
 
 body{
     font-family:'Avenir';
@@ -58,15 +60,6 @@ nav{
     padding-right: 1rem;
 }
 
-.narrative__title{
-    padding-top: 1.5rem;
-}
-
-.narrative__description{
-    padding-bottom: 1rem;
-
-}
-
 .about__image{
     width: 89vw;
     height: calc(0.50*89vw);
@@ -74,14 +67,24 @@ nav{
 
 .about__description{
     padding-top: 0.5rem;
-    word-spacing: 0.19rem;
-    line-height: 1.5rem;
+    word-spacing: 0.01rem;
+    line-height: 1.3rem;
+}
+
+.about__description--artist{
+    padding-top: 0.3rem;
+    line-height: 1.3rem;
+}
+
+.narrative__title{
+    padding-top: 1.5rem;
 }
 
 .narrative__description{
-    line-height: 1.2rem;
+    line-height: 1.1rem;
     padding-top: 0.2rem;
-    width: 89%;
+    padding-bottom: 1rem;
+    width: 93%;
 }
 
 .gallery__image{
@@ -121,7 +124,7 @@ footer{
 
 // Font Weight, Font Styles and Font Size
 
-.hero, .section__heading, .nav__links--highlight, .about__description, .narrative__description, .contact__name{
+.hero, .section__heading, .nav__links--highlight, .about__description, .narrative__description, .about__description--artist, .contact__name{
     font-family: 'Avenir-Demi';
 }
 
@@ -130,7 +133,7 @@ footer{
 }
 
 .company{
-    font-size: 1.6rem;
+    font-size: 1.55rem;
     font-weight:400;
 }
 
@@ -138,16 +141,16 @@ footer{
     font-size: 1.5rem;
 }
 
-.nav__links--highlight, .nav__links{
-    font-size: 0.9rem;
-}
-
-.about__description, .narrative__title{
-    font-size: 0.92rem;
+.about__description, .about__description--artist, .narrative__title{
+    font-size: 0.856rem;
 }
 
 .narrative__description, .contact{
-    font-size: 0.842rem;
+    font-size: 0.785rem;
+}
+
+.nav__links--highlight, .nav__links{
+    font-size: 0.74rem;
 }
 
 .copyright{
