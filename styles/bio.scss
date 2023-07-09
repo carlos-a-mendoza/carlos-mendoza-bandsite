@@ -55,20 +55,40 @@ nav{
         padding-bottom: 2.25rem;
         padding-top: 1rem;
     }
+
+    &:hover{
+        cursor: pointer;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #FFFFFF;
+        
+        @include mixins.tablet{
+            padding-bottom: 1.5rem;
+            padding-top: 1.5rem;
+            border-bottom: 4px solid #FFFFFF;
+        }
+        @include mixins.laptop{
+            padding-bottom: 2.25rem;
+            padding-top: 1.25rem;
+            border-bottom: 5px solid #FFFFFF;
+        }
+    }
 }
 
 .nav__links--highlight{
-    padding-bottom: 0.5rem;
-    border-bottom: 5px solid #FFFFFF;
+    
+    border-bottom: 2px solid #FFFFFF;
+
     @include mixins.tablet{
         padding-bottom: 1.5rem;
         padding-top: 1.5rem;
         margin-right: 3rem;
         letter-spacing: 0.02rem;
+        border-bottom: 4px solid #FFFFFF;
     }
     @include mixins.laptop{
         padding-bottom: 2.25rem;
         padding-top: 1.25rem;
+        border-bottom: 5px solid #FFFFFF;
     }
 }
 
