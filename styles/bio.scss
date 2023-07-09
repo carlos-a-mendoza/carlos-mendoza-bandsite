@@ -17,7 +17,7 @@ nav{
         padding-left: 2rem;
         padding-top: 0.5rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-left: 10rem;
         padding-top: 2rem;
     }
@@ -30,7 +30,7 @@ nav{
     @include mixins.tablet{
         padding-bottom: 1rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-bottom: 2rem;
     }
 }
@@ -43,7 +43,7 @@ nav{
         align-items: center;
         padding-left: 3.5rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-left: 4rem;
     }
 }
@@ -51,7 +51,7 @@ nav{
 .nav__links{
     width: 50%;
     text-align: center;
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-bottom: 2.25rem;
         padding-top: 1rem;
     }
@@ -66,7 +66,7 @@ nav{
         margin-right: 3rem;
         letter-spacing: 0.02rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-bottom: 2.25rem;
         padding-top: 1.25rem;
     }
@@ -86,7 +86,7 @@ nav{
         height: calc(0.6*100vw);
     }
 
-    @include mixins.desktop{
+    @include mixins.laptop{
         height: calc(0.55*100vw);
     }
 
@@ -98,7 +98,7 @@ nav{
         padding-left: 2rem;
         }
 
-        @include mixins.desktop{
+        @include mixins.laptop{
         padding-top: 0rem;
         padding-left: 10rem;
         padding-bottom: 3rem;
@@ -106,7 +106,7 @@ nav{
     }
 }
 
-.section__heading, .narrative__title{
+.section__heading{
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
 
@@ -116,15 +116,16 @@ nav{
     }
 }
 
-.about, .narrative, .gallery, footer{
+.about, .narrative, footer{
     padding-left: 1rem;
     padding-right: 1rem;
+
     @include mixins.tablet{
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-left: 10rem;
         padding-right: 10rem;
     }
@@ -135,7 +136,7 @@ nav{
         padding-left: 2rem;
         padding-right: 0.5rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-left: 10rem;
         padding-right: 10rem;
     }
@@ -167,7 +168,7 @@ nav{
         padding-top: 2rem;
         line-height: 1.8rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-right: 17rem;
         line-height: 2.5rem;
     }
@@ -191,12 +192,16 @@ nav{
 }
 
 .narrative__title{
+    padding-bottom: 0.5rem;
     padding-top: 1.5rem;
+
     @include mixins.tablet{
         width: 80%;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
     }
     @include mixins.tablet{
-        padding-top: 4rem;
+        // padding-top: 4rem;
     }
 }
 
@@ -205,6 +210,7 @@ nav{
         display: flex;
         width: 80%;
         justify-content: space-between;
+        padding-bottom: 1rem;
     }
 }
 
@@ -217,7 +223,7 @@ nav{
         line-height: 1.2rem;
         letter-spacing: 0.0001rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         line-height: 2rem;
         letter-spacing: 0rem;
     }
@@ -227,7 +233,7 @@ nav{
     @include mixins.tablet{
         padding-right:1rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-right:1.5rem;
     }
 }
@@ -236,9 +242,28 @@ nav{
     @include mixins.tablet{
         padding-left:1rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-left:1.5rem;
     }
+}
+
+.gallery{
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include mixins.tablet{
+        padding-left: 2rem;
+        padding-right: 0.5rem;
+    }
+    @include mixins.laptop{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+.gallery__container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .gallery__image{
@@ -251,7 +276,7 @@ nav{
         padding-bottom: 1rem;
         padding-right: 1rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-bottom: 2rem;
         padding-right: 2rem;
     }
@@ -287,7 +312,7 @@ footer{
 .socials__logo{
     padding-right: 2rem;
     margin-top: 1rem;
-    @include mixins.desktop{
+    @include mixins.laptop{
         width: 5rem;
         height: 2.5rem;
     }
@@ -300,7 +325,7 @@ footer{
         order:1;
         width: 100%;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         justify-content: flex-start
     }
 }
@@ -314,6 +339,9 @@ footer{
 }
 
 .contact{
+    @include mixins.laptop{
+        padding-right: 4rem;
+    }
     @include mixins.desktop{
         padding-right: 10rem;
     }
@@ -332,7 +360,7 @@ footer{
         order: 2;
     }
 
-    @include mixins.desktop{
+    @include mixins.laptop{
         padding-top: 3rem;
     }
 }
@@ -359,41 +387,39 @@ footer{
 
 .contact__name{
     font-family: 'Avenir-Bold';
-    // font-family: 'Avenir-Demi';
 }
 
 .company{
     font-size: 1.55rem;
     font-weight:400;
-    @include mixins.desktop{
+    @include mixins.laptop{
         font-size: 2.4rem;   
     }
 }
 
-.hero__title, .section__heading {
+.hero__title{
     font-size: 1.5rem;
     @include mixins.tablet{
         font-size: 3.85rem;   
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         font-size: 6rem;   
     }
 }
 
 .section__heading{
+    font-size: 1.5rem;
     @include mixins.tablet{
         font-size: 2.3rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         font-size: 3.65rem;
     }
 }
 
-.about__description, .about__description--artist, .narrative__title{
-    font-size: 0.875rem;
-}
-
 .about__description{
+    font-size: 0.875rem;
+    
     @include mixins.tablet{
         font-size: 1.3rem;
     }
@@ -402,21 +428,25 @@ footer{
     }
 
     &--artist{
+        font-size: 0.875rem;
+
         @include mixins.tablet{
             font-size: 1.036rem;
         }
 
-        @include mixins.desktop{
+        @include mixins.laptop{
             font-size: 1.62rem;
         }
     }
 }
 
 .narrative__title{
+    font-size: 0.875rem;
+
     @include mixins.tablet{
         font-size: 1.4rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         font-size: 2.4rem;
     }
 }
@@ -426,7 +456,7 @@ footer{
     @include mixins.tablet{
         font-size: 0.815rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         font-size: 1.379rem;
     }
 }
@@ -436,7 +466,7 @@ footer{
     @include mixins.tablet{
         font-size: 0.82rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         font-size: 1.38rem;
         line-height: 1.8rem;
         letter-spacing: 0.001rem;
@@ -445,10 +475,11 @@ footer{
 
 .contact__info, .contact__email{
     font-size: 0.76rem;
+
     @include mixins.tablet{
         font-size: 0.81rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         font-size: 1.37rem;
         line-height: 1.8rem;
         padding-top: 2.5rem;
@@ -457,10 +488,11 @@ footer{
 
 .nav__links--highlight, .nav__links{
     font-size: 0.74rem;
+
     @include mixins.tablet{
         font-size: 0.9rem;
     }
-    @include mixins.desktop{
+    @include mixins.laptop{
         font-size: 1.5rem;
     }
 }
@@ -471,14 +503,14 @@ footer{
         justify-content: flex-end;
         font-size: 0.84rem;
     }
-    @include mixins.tablet{
+    @include mixins.laptop{
         font-size: 1.36rem;
     }
 }
 
 // Font Color and Background Colour
 
-.nav__links, .nav__links--highlight, .hero__title, .company, .contact, .copyright, .section__heading--footer{
+.nav__links, .nav__links--highlight, .hero__title, .company, .contact, .copyright, .section__heading--footer, .contact__email{
     color: $primary-color3;
 }
 
