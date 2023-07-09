@@ -10,19 +10,32 @@ body{
 }
 
 nav{
-    background-color: $primary-color1;
+    @include mixins.tablet{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 2rem;
+        padding-top: 0.5rem;
+    }
 }
 
 .company{
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
+    @include mixins.tablet{
+        padding-bottom: 1rem;
+    }
 }
 
 .nav__container{
     display: flex;
     justify-content: center;
 
+    @include mixins.tablet{
+        align-items: center;
+        padding-left: 3.5rem;
+    }
 }
 
 .nav__links{
@@ -32,7 +45,13 @@ nav{
 
 .nav__links--highlight{
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #FFFFFF;
+    border-bottom: 4px solid #FFFFFF;
+    @include mixins.tablet{
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        margin-right: 3rem;
+        letter-spacing: 0.02rem;
+    }
 }
 
 .hero{
@@ -41,62 +60,142 @@ nav{
     background-position: center;
     width: 99vw;
     height: calc(0.55*100vw);
-    
     display: flex;
     align-items: center;
 
     &__title{
         padding-left: 1rem;
+
+        @include mixins.tablet{
+        padding-left: 2rem;
+        }
     }
 }
 
 .section__heading, .narrative__title{
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
+
+    @include mixins.tablet{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
 }
 
 .about, .narrative, .gallery, footer{
     padding-left: 1rem;
     padding-right: 1rem;
+    @include mixins.tablet{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.gallery{
+    @include mixins.tablet{
+        padding-left: 2rem;
+        padding-right: 0.5rem;
+    }
+}
+
+.about__container{
+    @include mixins.tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
 }
 
 .about__image{
-    width: 89vw;
+    width: 91vw;
     height: calc(0.50*89vw);
+    @include mixins.tablet{
+        width: 85%;
+        height: calc(0.5*85vw)
+    }
 }
 
 .about__description{
     padding-top: 0.5rem;
     word-spacing: 0.01rem;
     line-height: 1.3rem;
+    @include mixins.tablet{
+        width: 85%;
+    }
 }
 
 .about__description--artist{
     padding-top: 0.3rem;
     line-height: 1.3rem;
+    @include mixins.tablet{
+        width: 85%;
+    }
+}
+
+.narrative{
+    @include mixins.tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
 }
 
 .narrative__title{
     padding-top: 1.5rem;
+    @include mixins.tablet{
+        width: 85%;
+    }
+}
+
+.narrative__container{
+    @include mixins.tablet{
+        display: flex;
+        width: 85%;
+    }
 }
 
 .narrative__description{
     line-height: 1.1rem;
     padding-top: 0.2rem;
     padding-bottom: 1rem;
-    width: 93%;
+    width: 94%;
+    @include mixins.tablet{
+        width: 80%;
+        padding-right: 2.5rem;
+    }
 }
 
 .gallery__image{
     @extend .about__image;
     height: calc(0.52*91vw);
     padding-bottom: 0.5rem;
-    
+    @include mixins.tablet{
+        width: 32.5%;
+        height: calc(0.52*32vw);
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 footer{
-    @extend nav;
     padding-top: 1rem;
+    @include mixins.tablet{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer__top{
+    @include mixins.tablet{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.socials{
+    @include mixins.tablet{
+        padding-left: 2rem;
+    }
 }
 
 .socials__logo{
@@ -104,9 +203,18 @@ footer{
     margin-top: 1rem;
 }
 
+.contact__container{
+    @include mixins.tablet{
+        display: flex;
+        justify-content: space-between;
+    }
+}
 .contact, .contact__name, .contact__info, .contact__email{
     padding-top: 0.7rem;
     line-height: 1.2rem;;
+    @include mixins.tablet{
+        padding-top: 1rem;
+    }
 }
 
 .copyright{
@@ -130,6 +238,7 @@ footer{
 
 .contact__name{
     font-family: 'Avenir-Bold';
+    // font-family: 'Avenir-Demi';
 }
 
 .company{
@@ -142,11 +251,19 @@ footer{
 }
 
 .about__description, .about__description--artist, .narrative__title{
-    font-size: 0.856rem;
+    font-size: 0.875rem;
 }
 
-.narrative__description, .contact{
-    font-size: 0.785rem;
+.narrative__description{
+    font-size: 0.8rem;
+}
+
+.contact__name{
+    font-size: 0.77rem;
+}
+
+.contact__info, .contact__email{
+    font-size: 0.76rem;
 }
 
 .nav__links--highlight, .nav__links{
@@ -163,8 +280,10 @@ footer{
     color: $primary-color3;
 }
 
+nav, footer{
+    background-color: $primary-color1;
+}
+
 .gallery{
     background-color: $secondary-color3;
 }
-
-

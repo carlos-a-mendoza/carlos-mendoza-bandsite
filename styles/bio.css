@@ -25,8 +25,14 @@ body {
   font-family: "Avenir";
 }
 
-nav, footer {
-  background-color: #323232;
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+  }
 }
 
 .company {
@@ -34,10 +40,21 @@ nav, footer {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
+@media (min-width: 768px) {
+  .company {
+    padding-bottom: 1rem;
+  }
+}
 
 .nav__container {
   display: flex;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  .nav__container {
+    align-items: center;
+    padding-left: 3.5rem;
+  }
 }
 
 .nav__links {
@@ -47,7 +64,15 @@ nav, footer {
 
 .nav__links--highlight {
   padding-bottom: 0.5rem;
-  border-bottom: 3px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+}
+@media (min-width: 768px) {
+  .nav__links--highlight {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    margin-right: 3rem;
+    letter-spacing: 0.02rem;
+  }
 }
 
 .hero {
@@ -62,20 +87,58 @@ nav, footer {
 .hero__title {
   padding-left: 1rem;
 }
+@media (min-width: 768px) {
+  .hero__title {
+    padding-left: 2rem;
+  }
+}
 
 .section__heading, .narrative__title {
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  .section__heading, .narrative__title {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .about, .narrative, .gallery, footer {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media (min-width: 768px) {
+  .about, .narrative, .gallery, footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    padding-left: 2rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .about__image, .gallery__image {
-  width: 89vw;
+  width: 91vw;
   height: 44.5vw;
+}
+@media (min-width: 768px) {
+  .about__image, .gallery__image {
+    width: 85%;
+    height: 42.5vw;
+  }
 }
 
 .about__description {
@@ -83,30 +146,93 @@ nav, footer {
   word-spacing: 0.01rem;
   line-height: 1.3rem;
 }
+@media (min-width: 768px) {
+  .about__description {
+    width: 85%;
+  }
+}
 
 .about__description--artist {
   padding-top: 0.3rem;
   line-height: 1.3rem;
 }
+@media (min-width: 768px) {
+  .about__description--artist {
+    width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  .narrative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .narrative__title {
   padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .narrative__title {
+    width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  .narrative__container {
+    display: flex;
+    width: 85%;
+  }
 }
 
 .narrative__description {
   line-height: 1.1rem;
   padding-top: 0.2rem;
   padding-bottom: 1rem;
-  width: 93%;
+  width: 94%;
+}
+@media (min-width: 768px) {
+  .narrative__description {
+    width: 80%;
+    padding-right: 2.5rem;
+  }
 }
 
 .gallery__image {
   height: 47.32vw;
   padding-bottom: 0.5rem;
 }
+@media (min-width: 768px) {
+  .gallery__image {
+    width: 32.5%;
+    height: 16.64vw;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 footer {
   padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__top {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .socials {
+    padding-left: 2rem;
+  }
 }
 
 .socials__logo {
@@ -114,9 +240,21 @@ footer {
   margin-top: 1rem;
 }
 
+@media (min-width: 768px) {
+  .contact__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .contact, .contact__name, .contact__info, .contact__email {
   padding-top: 0.7rem;
   line-height: 1.2rem;
+}
+@media (min-width: 768px) {
+  .contact, .contact__name, .contact__info, .contact__email {
+    padding-top: 1rem;
+  }
 }
 
 .copyright {
@@ -150,11 +288,19 @@ footer {
 }
 
 .about__description, .about__description--artist, .narrative__title {
-  font-size: 0.856rem;
+  font-size: 0.875rem;
 }
 
-.narrative__description, .contact {
-  font-size: 0.785rem;
+.narrative__description {
+  font-size: 0.8rem;
+}
+
+.contact__name {
+  font-size: 0.77rem;
+}
+
+.contact__info, .contact__email {
+  font-size: 0.76rem;
 }
 
 .nav__links--highlight, .nav__links {
@@ -167,6 +313,10 @@ footer {
 
 .nav__links, .nav__links--highlight, .hero__title, .company, .contact, .copyright, .section__heading--footer {
   color: #FFFFFF;
+}
+
+nav, footer {
+  background-color: #323232;
 }
 
 .gallery {
