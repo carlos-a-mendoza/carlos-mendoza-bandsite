@@ -51,6 +51,7 @@ nav{
 .nav__links{
     width: 50%;
     text-align: center;
+    padding-bottom: 0.5rem;
     @include mixins.laptop{
         padding-bottom: 2.25rem;
         padding-top: 1rem;
@@ -58,7 +59,7 @@ nav{
 
     &:hover{
         cursor: pointer;
-        border-bottom: 2px solid #FFFFFF;
+        border-bottom: 3px solid #FFFFFF;
 
         @include mixins.tablet{
             padding-bottom: 1.5rem;
@@ -75,14 +76,14 @@ nav{
 
 .nav__links--highlight{
     
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
 
     @include mixins.tablet{
         padding-bottom: 1.5rem;
         padding-top: 1.5rem;
         margin-right: 3rem;
         letter-spacing: 0.02rem;
-        border-bottom: 4px solid #FFFFFF;
+        border-bottom: 3px solid #FFFFFF;
     }
     @include mixins.laptop{
         padding-bottom: 2.25rem;
@@ -143,6 +144,10 @@ nav{
         padding-top: 3rem;
         padding-bottom: 1.5rem;
     }
+    @include mixins.desktop{
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .about, .narrative, footer{
@@ -200,6 +205,9 @@ nav{
     @include mixins.laptop{
         padding-right: 17rem;
         line-height: 2.5rem;
+    }@include mixins.laptop{
+        padding-top: 4rem;
+        line-height: 3rem;
     }
 }
 
@@ -240,6 +248,7 @@ nav{
     }
     @include mixins.desktop{
         padding-top: 5rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -299,20 +308,15 @@ nav{
     }
 }
 
-.gallery__container{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .gallery__image{
     @extend .about__image;
     height: calc(0.52*91vw);
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
     @include mixins.tablet{
         width: 32.5%;
         height: calc(0.52*32vw);
-        padding-bottom: 1rem;
-        padding-right: 1rem;
+        padding-bottom: 1.2rem;
+        padding-right: 1.4rem;
     }
     @include mixins.laptop{
         padding-bottom: 2rem;
@@ -340,9 +344,9 @@ footer{
 
 .socials{
     @include mixins.tablet{
-        padding-left: 2rem;
+        padding-left: 3.6rem;
     }
-    @include mixins.tablet{
+    @include mixins.laptop{
         padding-left: 8.5rem;
     }
 }
@@ -350,6 +354,10 @@ footer{
 .socials__logo{
     padding-right: 2rem;
     margin-top: 1rem;
+    @include mixins.tablet{
+        width: 4rem;
+        height: 1.5rem;
+    }
     @include mixins.laptop{
         width: 5rem;
         height: 2.5rem;
@@ -370,7 +378,7 @@ footer{
 
 .contact, .contact__name, .contact__info, .contact__email{
     padding-top: 0.7rem;
-    line-height: 1.2rem;;
+    line-height: 1.15em;;
     @include mixins.tablet{
         padding-top: 1rem;
     }
@@ -385,11 +393,29 @@ footer{
     }
 }
 
+.company__container{
+    display: flex;
+    padding-top: 2.5rem;
+    @include mixins.tablet{
+       padding-top: 2.5rem;
+       order: -1;
+    }
+    @include mixins.desktop{
+        padding-top: 4.5rem;
+        order: -1;
+     }
+}
+
+.company__heading{
+    @include mixins.desktop{
+        padding: 0; 
+    }
+}
+
 .copyright{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 0.5rem;
     word-spacing: 0.1rem;
 
     @include mixins.tablet{
@@ -400,15 +426,6 @@ footer{
 
     @include mixins.laptop{
         padding-top: 3rem;
-    }
-}
-
-.company__container{
-    display: flex;
-    padding-top: 2.5rem;
-    @include mixins.tablet{
-       padding-top: 2.5rem;
-       order: -1;
     }
 }
 
@@ -456,17 +473,17 @@ footer{
 }
 
 .about__description{
-    font-size: 0.875rem;
+    font-size: 0.87rem;
     
     @include mixins.tablet{
         font-size: 1.3rem;
     }
-    @include mixins.tablet{
+    @include mixins.laptop{
         font-size: 2.1rem;
     }
 
     &--artist{
-        font-size: 0.875rem;
+        font-size: 0.87rem;
 
         @include mixins.tablet{
             font-size: 1.036rem;
@@ -497,10 +514,14 @@ footer{
     @include mixins.laptop{
         font-size: 1.379rem;
     }
+    @include mixins.desktop{
+        font-size: 1.28rem;
+    }
 }
 
 .contact__name{
     font-size: 0.77rem;
+    padding-bottom: 1rem;
     @include mixins.tablet{
         font-size: 0.82rem;
     }

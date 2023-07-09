@@ -80,6 +80,7 @@ body {
 .nav__links {
   width: 50%;
   text-align: center;
+  padding-bottom: 0.5rem;
 }
 @media (min-width: 1440px) {
   .nav__links {
@@ -89,7 +90,7 @@ body {
 }
 .nav__links:hover {
   cursor: pointer;
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }
 @media (min-width: 768px) {
   .nav__links:hover {
@@ -107,7 +108,7 @@ body {
 }
 
 .nav__links--highlight {
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }
 @media (min-width: 768px) {
   .nav__links--highlight {
@@ -115,7 +116,7 @@ body {
     padding-top: 1.5rem;
     margin-right: 3rem;
     letter-spacing: 0.02rem;
-    border-bottom: 4px solid #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
   }
 }
 @media (min-width: 1440px) {
@@ -164,7 +165,7 @@ body {
 }
 
 .hero__background {
-  background-color: rgba(50, 50, 50, 0.3137254902);
+  background-color: rgba(50, 50, 50, 0.5019607843);
   width: 100%;
   height: 100%;
   display: flex;
@@ -179,6 +180,12 @@ body {
   .section__heading {
     padding-top: 3rem;
     padding-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1740px) and (max-width: 1920px) {
+  .section__heading {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -249,6 +256,12 @@ body {
     line-height: 2.5rem;
   }
 }
+@media (min-width: 1440px) {
+  .about__description {
+    padding-top: 4rem;
+    line-height: 3rem;
+  }
+}
 
 .about__description--artist {
   padding-top: 0.3rem;
@@ -298,6 +311,7 @@ body {
 @media (min-width: 1740px) and (max-width: 1920px) {
   .narrative__title {
     padding-top: 5rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -368,21 +382,16 @@ body {
   }
 }
 
-.gallery__container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .gallery__image {
   height: 47.32vw;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .gallery__image {
     width: 32.5%;
     height: 16.64vw;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
+    padding-bottom: 1.2rem;
+    padding-right: 1.4rem;
   }
 }
 @media (min-width: 1440px) {
@@ -414,10 +423,10 @@ footer {
 
 @media (min-width: 768px) {
   .socials {
-    padding-left: 2rem;
+    padding-left: 3.6rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .socials {
     padding-left: 8.5rem;
   }
@@ -426,6 +435,12 @@ footer {
 .socials__logo {
   padding-right: 2rem;
   margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .socials__logo {
+    width: 4rem;
+    height: 1.5rem;
+  }
 }
 @media (min-width: 1440px) {
   .socials__logo {
@@ -450,7 +465,7 @@ footer {
 
 .contact, .contact__name, .contact__info, .contact__email {
   padding-top: 0.7rem;
-  line-height: 1.2rem;
+  line-height: 1.15em;
 }
 @media (min-width: 768px) {
   .contact, .contact__name, .contact__info, .contact__email {
@@ -469,11 +484,33 @@ footer {
   }
 }
 
+.company__container {
+  display: flex;
+  padding-top: 2.5rem;
+}
+@media (min-width: 768px) {
+  .company__container {
+    padding-top: 2.5rem;
+    order: -1;
+  }
+}
+@media (min-width: 1740px) and (max-width: 1920px) {
+  .company__container {
+    padding-top: 4.5rem;
+    order: -1;
+  }
+}
+
+@media (min-width: 1740px) and (max-width: 1920px) {
+  .company__heading {
+    padding: 0;
+  }
+}
+
 .copyright {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 0.5rem;
   word-spacing: 0.1rem;
 }
 @media (min-width: 768px) {
@@ -486,17 +523,6 @@ footer {
 @media (min-width: 1440px) {
   .copyright {
     padding-top: 3rem;
-  }
-}
-
-.company__container {
-  display: flex;
-  padding-top: 2.5rem;
-}
-@media (min-width: 768px) {
-  .company__container {
-    padding-top: 2.5rem;
-    order: -1;
   }
 }
 
@@ -552,20 +578,20 @@ footer {
 }
 
 .about__description {
-  font-size: 0.875rem;
+  font-size: 0.87rem;
 }
 @media (min-width: 768px) {
   .about__description {
     font-size: 1.3rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .about__description {
     font-size: 2.1rem;
   }
 }
 .about__description--artist {
-  font-size: 0.875rem;
+  font-size: 0.87rem;
 }
 @media (min-width: 768px) {
   .about__description--artist {
@@ -605,9 +631,15 @@ footer {
     font-size: 1.379rem;
   }
 }
+@media (min-width: 1740px) and (max-width: 1920px) {
+  .narrative__description {
+    font-size: 1.28rem;
+  }
+}
 
 .contact__name {
   font-size: 0.77rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .contact__name {
