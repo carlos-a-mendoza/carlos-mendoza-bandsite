@@ -51,7 +51,7 @@ nav{
 .nav__links{
     width: 50%;
     text-align: center;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
     @include mixins.laptop{
         padding-bottom: 2.25rem;
         padding-top: 1rem;
@@ -132,6 +132,9 @@ nav{
     height: 100%;
     display: flex;
     align-items: center;
+    @include mixins.desktop{
+        padding-bottom: 8rem;
+    }
 }
 
 
@@ -205,8 +208,8 @@ nav{
     @include mixins.laptop{
         padding-right: 17rem;
         line-height: 2.5rem;
-    }@include mixins.laptop{
-        padding-top: 4rem;
+    }@include mixins.desktop{
+        padding-top: 3rem;
         line-height: 3rem;
     }
 }
@@ -569,7 +572,11 @@ footer{
 
 // Font Color and Background Colour
 
-.nav__links, .nav__links--highlight, .hero__title, .company, .contact, .copyright, .section__heading--footer, .contact__email{
+.nav__links--inactive{
+    color: $primary-color2;
+} 
+
+.nav__links, .hero__title, .company, .contact, .copyright, .section__heading--footer, .contact__email{
     color: $primary-color3;
 }
 
