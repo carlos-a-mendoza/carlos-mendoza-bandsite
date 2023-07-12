@@ -9,87 +9,8 @@ body{
     font-family:'Avenir';
 }
 
-nav{
-    @include mixins.tablet{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-left: 2rem;
-        padding-top: 0.5rem;
-    }
-    @include mixins.laptop{
-        padding-left: 10rem;
-        padding-top: 2rem;
-    }
-}
-
-.company{
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    @include mixins.tablet{
-        padding-bottom: 1rem;
-    }
-    @include mixins.laptop{
-        padding-bottom: 2rem;
-    }
-}
-
 .nav__container{
     display: flex;
-    justify-content: center;
-
-    @include mixins.tablet{
-        align-items: center;
-        padding-left: 3.5rem;
-    }
-    @include mixins.laptop{
-        padding-left: 4rem;
-    }
-}
-
-.nav__links{
-    width: 50%;
-    text-align: center;
-    padding-bottom: 0.2rem;
-    @include mixins.laptop{
-        padding-bottom: 2.25rem;
-        padding-top: 1rem;
-    }
-
-    &:hover{
-        cursor: pointer;
-        border-bottom: 3px solid #FFFFFF;
-
-        @include mixins.tablet{
-            padding-bottom: 1.5rem;
-            padding-top: 1.5rem;
-            border-bottom: 4px solid #FFFFFF;
-        }
-        @include mixins.laptop{
-            padding-bottom: 2.25rem;
-            padding-top: 1.25rem;
-            border-bottom: 5px solid #FFFFFF;
-        }
-    }
-}
-
-.nav__links--highlight{
-    
-    border-bottom: 3px solid #FFFFFF;
-
-    @include mixins.tablet{
-        padding-bottom: 1.5rem;
-        padding-top: 1.5rem;
-        margin-right: 3rem;
-        letter-spacing: 0.02rem;
-        border-bottom: 3px solid #FFFFFF;
-    }
-    @include mixins.laptop{
-        padding-bottom: 2.25rem;
-        padding-top: 1.25rem;
-        border-bottom: 5px solid #FFFFFF;
-    }
 }
 
 .hero{
@@ -101,29 +22,29 @@ nav{
     display: flex;
     align-items: center;
 
-    @include mixins.tablet{
-        width: 100vw;
-        height: calc(0.6*100vw);
-    }
+    // @include mixins.tablet{
+    //     width: 100vw;
+    //     height: calc(0.6*100vw);
+    // }
 
-    @include mixins.laptop{
-        height: calc(0.55*100vw);
-    }
+    // @include mixins.laptop{
+    //     height: calc(0.55*100vw);
+    // }
 
-    &__title{
-        padding-left: 1rem;
+    // &__title{
+    //     padding-left: 1rem;
 
-        @include mixins.tablet{
-        padding-top: 3rem;
-        padding-left: 2rem;
-        }
+    //     @include mixins.tablet{
+    //     padding-top: 3rem;
+    //     padding-left: 2rem;
+    //     }
 
-        @include mixins.laptop{
-        padding-top: 0rem;
-        padding-left: 10rem;
-        padding-bottom: 3rem;
-        }
-    }
+    //     @include mixins.laptop{
+    //     padding-top: 0rem;
+    //     padding-left: 10rem;
+    //     padding-bottom: 3rem;
+    //     }
+    // }
 }
 
 .hero__background{
@@ -132,223 +53,31 @@ nav{
     height: 100%;
     display: flex;
     align-items: center;
-    @include mixins.desktop{
-        padding-bottom: 8rem;
-    }
-}
-
-
-footer{
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    @include mixins.tablet{
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    @include mixins.laptop{
-        padding-left: 10rem;
-        padding-right: 10rem;
-    }
-}
-
-footer{
-    padding-top: 1rem;
-    @include mixins.tablet{
-        display: flex;
-        flex-flow: wrap;
-        justify-content: space-between;
-        padding-top: 0;
-    }
-}
-
-.footer__top{
-    @include mixins.tablet{
-        display: flex;
-        align-items: center;
-        order:-2;
-    }
-}
-
-.socials{
-    @include mixins.tablet{
-        padding-left: 3.6rem;
-    }
-    @include mixins.laptop{
-        padding-left: 8.5rem;
-    }
-}
-
-.socials__logo{
-    padding-right: 2rem;
-    margin-top: 1rem;
-    @include mixins.tablet{
-        width: 4rem;
-        height: 1.5rem;
-    }
-    @include mixins.laptop{
-        width: 5rem;
-        height: 2.5rem;
-    }
-}
-
-.contact__container{
-    @include mixins.tablet{
-        display: flex;
-        justify-content: space-between;
-        order:1;
-        width: 100%;
-    }
-    @include mixins.laptop{
-        justify-content: flex-start
-    }
-}
-
-.contact, .contact__name, .contact__info, .contact__email{
-    padding-top: 0.7rem;
-    line-height: 1.15em;;
-    @include mixins.tablet{
-        padding-top: 1rem;
-    }
-}
-
-.contact{
-    @include mixins.laptop{
-        padding-right: 4rem;
-    }
-    @include mixins.desktop{
-        padding-right: 10rem;
-    }
-}
-
-.company__container{
-    display: flex;
-    padding-top: 2.5rem;
-    @include mixins.tablet{
-       padding-top: 2.5rem;
-       order: -1;
-    }
-    @include mixins.desktop{
-        padding-top: 4.5rem;
-        order: -1;
-     }
-}
-
-.company__heading{
-    @include mixins.desktop{
-        padding: 0; 
-    }
-}
-
-.copyright{
-    display: flex;
+    // @include mixins.desktop{
+    //     padding-bottom: 8rem;
+    // }
     flex-direction: column;
-    align-items: flex-start;
-    word-spacing: 0.1rem;
-
-    @include mixins.tablet{
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        order: 2;
-    }
-
-    @include mixins.laptop{
-        padding-top: 3rem;
-    }
 }
 
-.copyright__description{
-    padding-top: 0.2rem;
-    padding-bottom: 1rem;
-}
 
 // Font Weight, Font Styles and Font Size
 
-.hero, .section__heading, .nav__links--highlight, .contact__name{
+.hero, .section__heading{
     font-family: 'Avenir-Demi';
-}
-
-.contact__name{
-    font-family: 'Avenir-Bold';
-}
-
-.company{
-    font-size: 1.55rem;
-    font-weight:400;
-    @include mixins.laptop{
-        font-size: 2.4rem;   
-    }
 }
 
 .hero__title{
     font-size: 1.5rem;
-    @include mixins.tablet{
-        font-size: 3.85rem;   
-    }
-    @include mixins.laptop{
-        font-size: 6rem;   
-    }
-}
-
-.contact__name{
-    font-size: 0.77rem;
-    padding-bottom: 1rem;
-    @include mixins.tablet{
-        font-size: 0.82rem;
-    }
-    @include mixins.laptop{
-        font-size: 1.38rem;
-        line-height: 1.8rem;
-        letter-spacing: 0.001rem;
-    }
-}
-
-.contact__info, .contact__email{
-    font-size: 0.76rem;
-
-    @include mixins.tablet{
-        font-size: 0.81rem;
-    }
-    @include mixins.laptop{
-        font-size: 1.37rem;
-        line-height: 1.8rem;
-        padding-top: 2.5rem;
-    }
-}
-
-.nav__links--highlight, .nav__links{
-    font-size: 0.74rem;
-
-    @include mixins.tablet{
-        font-size: 0.9rem;
-    }
-    @include mixins.laptop{
-        font-size: 1.5rem;
-    }
-}
-
-.copyright{
-    font-size: 0.67rem;
-    @include mixins.tablet{
-        justify-content: flex-end;
-        font-size: 0.84rem;
-    }
-    @include mixins.laptop{
-        font-size: 1.36rem;
-    }
+    // @include mixins.tablet{
+    //     font-size: 3.85rem;   
+    // }
+    // @include mixins.laptop{
+    //     font-size: 6rem;   
+    // }
 }
 
 // Font Color and Background Colour
 
-.nav__links--inactive{
-    color: $primary-color2;
-} 
-
-.nav__links, .hero__title, .company, .contact, .copyright, .section__heading--footer, .contact__email{
+.hero__title, .hero__album{
     color: $primary-color3;
-}
-
-nav, footer{
-    background-color: $primary-color1;
 }
