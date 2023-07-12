@@ -54,8 +54,6 @@ body{
     }
 }
 
-
-
 .section__heading{
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
@@ -70,7 +68,7 @@ body{
     }
 }
 
-.about{
+.about, .narrative{
     padding-left: 1rem;
     padding-right: 1rem;
 
@@ -250,6 +248,26 @@ body{
     font-family: 'Avenir-Demi';
 }
 
+.hero__title{
+    font-size: 1.5rem;
+    @include mixins.tablet{
+        font-size: 3.85rem;   
+    }
+    @include mixins.laptop{
+        font-size: 6rem;   
+    }
+}
+
+.section__heading{
+    font-size: 1.5rem;
+    @include mixins.tablet{
+        font-size: 2.3rem;
+    }
+    @include mixins.laptop{
+        font-size: 3.65rem;
+    }
+}
+
 .about__description{
     font-size: 0.87rem;
     
@@ -297,13 +315,8 @@ body{
     }
 }
 
-
 // Font Color and Background Colour
 
-.hero__title{
+.hero__title, .section__heading--footer{
     color: $primary-color3;
-}
-
-.gallery{
-    background-color: $secondary-color3;
 }

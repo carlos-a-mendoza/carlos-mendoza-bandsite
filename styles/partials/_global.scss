@@ -1,3 +1,6 @@
+@use "./mixins";
+@import './variables';
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -56,9 +59,15 @@ nav{
     width: 50%;
     text-align: center;
     padding-bottom: 0.2rem;
+    @include mixins.tablet{
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
     @include mixins.laptop{
         padding-bottom: 2.25rem;
         padding-top: 1rem;
+        margin-right: 4rem;
+        margin-left: 4rem;
     }
 
     &:hover{
@@ -85,7 +94,6 @@ nav{
     @include mixins.tablet{
         padding-bottom: 1.5rem;
         padding-top: 1.5rem;
-        margin-right: 3rem;
         letter-spacing: 0.02rem;
         border-bottom: 3px solid #FFFFFF;
     }
@@ -304,7 +312,7 @@ footer{
     color: $primary-color2;
 } 
 
-.nav__links, .hero__title, .company, .contact, .copyright, .section__heading--footer, .contact__email{
+.nav__links, .nav__links--active, .hero__title, .company, .contact, .copyright, .section__heading--footer, .contact__email{
     color: $primary-color3;
 }
 

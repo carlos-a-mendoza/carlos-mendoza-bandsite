@@ -9,10 +9,6 @@ body{
     font-family:'Avenir';
 }
 
-.nav__container{
-    display: flex;
-}
-
 .hero{
     background-image: url("../Assets/Images/hero-shows.jpg");
     background-size: cover;
@@ -22,29 +18,29 @@ body{
     display: flex;
     align-items: center;
 
-    // @include mixins.tablet{
-    //     width: 100vw;
-    //     height: calc(0.6*100vw);
-    // }
+    @include mixins.tablet{
+        width: 100vw;
+        height: calc(0.6*100vw);
+    }
 
-    // @include mixins.laptop{
-    //     height: calc(0.55*100vw);
-    // }
+    @include mixins.laptop{
+        height: calc(0.55*100vw);
+    }
 
-    // &__title{
-    //     padding-left: 1rem;
+    &__title{
+        padding-left: 1rem;
 
-    //     @include mixins.tablet{
-    //     padding-top: 3rem;
-    //     padding-left: 2rem;
-    //     }
+        @include mixins.tablet{
+        padding-top: 3rem;
+        padding-left: 2rem;
+        }
 
-    //     @include mixins.laptop{
-    //     padding-top: 0rem;
-    //     padding-left: 10rem;
-    //     padding-bottom: 3rem;
-    //     }
-    // }
+        @include mixins.laptop{
+        padding-top: 0rem;
+        padding-left: 10rem;
+        padding-bottom: 3rem;
+        }
+    }
 }
 
 .hero__background{
@@ -53,9 +49,9 @@ body{
     height: 100%;
     display: flex;
     align-items: center;
-    // @include mixins.desktop{
-    //     padding-bottom: 8rem;
-    // }
+    @include mixins.desktop{
+        padding-bottom: 8rem;
+    }
     flex-direction: column;
 }
 
@@ -68,12 +64,22 @@ body{
 
 .hero__title{
     font-size: 1.5rem;
-    // @include mixins.tablet{
-    //     font-size: 3.85rem;   
-    // }
-    // @include mixins.laptop{
-    //     font-size: 6rem;   
-    // }
+    @include mixins.tablet{
+        font-size: 3.85rem;   
+    }
+    @include mixins.laptop{
+        font-size: 6rem;   
+    }
+}
+
+.section__heading{
+    font-size: 1.5rem;
+    @include mixins.tablet{
+        font-size: 2.3rem;
+    }
+    @include mixins.laptop{
+        font-size: 3.65rem;
+    }
 }
 
 // Font Color and Background Colour
@@ -81,3 +87,5 @@ body{
 .hero__title, .hero__album{
     color: $primary-color3;
 }
+
+
