@@ -48,12 +48,24 @@ body{
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
     @include mixins.desktop{
         padding-bottom: 8rem;
     }
-    flex-direction: column;
+    
 }
+
+.section__heading--hero, .hero__title{
+    padding-left: 1rem;
+    width: 80%;
+}
+
+.shows{
+    padding-left: 1rem;
+}
+
 
 
 // Font Weight, Font Styles and Font Size
@@ -72,19 +84,23 @@ body{
     }
 }
 
-.section__heading{
-    font-size: 1.5rem;
-    @include mixins.tablet{
-        font-size: 2.3rem;
-    }
-    @include mixins.laptop{
-        font-size: 3.65rem;
-    }
+// .section__heading{
+//     font-size: 1.5rem;
+//     @include mixins.tablet{
+//         font-size: 2.3rem;
+//     }
+//     @include mixins.laptop{
+//         font-size: 3.65rem;
+//     }
+// }
+
+.section__heading--hero{
+    font-size: 0.9rem;
 }
 
 // Font Color and Background Colour
 
-.hero__title, .hero__album{
+.hero__title, .section__heading--hero{
     color: $primary-color3;
 }
 

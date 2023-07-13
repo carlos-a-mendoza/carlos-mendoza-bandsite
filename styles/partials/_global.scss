@@ -104,6 +104,33 @@ nav{
     }
 }
 
+.section__heading{
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+
+    @include mixins.tablet{
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+    }
+    @include mixins.desktop{
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.button{
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    width: 100%;
+    border-radius: 4px;
+    text-align: center;
+
+    @include mixins.tablet{
+    padding-top: 0.8rem;
+    width:35%;
+    }
+}
+
 
 footer{
     padding-left: 1rem;
@@ -232,7 +259,7 @@ footer{
 
 // Font Weight, Font Styles and Font Size
 
-.hero, .section__heading, .nav__links--highlight, .contact__name{
+.hero, .section__heading, .nav__links--highlight, .contact__name, .button{
     font-family: 'Avenir-Demi';
 }
 
@@ -255,6 +282,23 @@ footer{
     }
     @include mixins.laptop{
         font-size: 6rem;   
+    }
+}
+
+.section__heading{
+    font-size: 1.5rem;
+    @include mixins.tablet{
+        font-size: 2.3rem;
+    }
+    @include mixins.laptop{
+        font-size: 3.65rem;
+    }
+}
+
+.button{
+    font-size: 1rem;
+    @include mixins.desktop{
+        font-size: 1.4rem;
     }
 }
 
@@ -312,10 +356,10 @@ footer{
     color: $primary-color2;
 } 
 
-.nav__links, .nav__links--active, .hero__title, .company, .contact, .copyright, .section__heading--footer, .contact__email{
+.nav__links, .nav__links--active, .hero__title, .company, .contact, .copyright, .section__heading--footer, .contact__email, .button{
     color: $primary-color3;
 }
 
-nav, footer{
+nav, footer, .button{
     background-color: $primary-color1;
 }

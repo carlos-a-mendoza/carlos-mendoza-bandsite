@@ -54,21 +54,21 @@ body{
     }
 }
 
-.section__heading{
-    padding-top: 1.5rem;
-    padding-bottom: 0.5rem;
+// .section__heading{
+//     padding-top: 1.5rem;
+//     padding-bottom: 0.5rem;
 
-    @include mixins.tablet{
-        padding-top: 3rem;
-        padding-bottom: 1.5rem;
-    }
-    @include mixins.desktop{
-        padding-top: 4rem;
-        padding-bottom: 2rem;
-    }
-}
+//     @include mixins.tablet{
+//         padding-top: 3rem;
+//         padding-bottom: 1.5rem;
+//     }
+//     @include mixins.desktop{
+//         padding-top: 4rem;
+//         padding-bottom: 2rem;
+//     }
+// }
 
-.about, .narrative{
+.about, .narrative, .conversation{
     padding-left: 1rem;
     padding-right: 1rem;
 
@@ -242,10 +242,139 @@ body{
     }
 }
 
+.conversation__container{
+    width: 91vw;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid $secondary-color2;
+    margin-bottom: 1rem;
+    @include mixins.tablet{
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+         width: 92%;
+        padding-top: 1rem;
+    }
+    @include mixins.desktop{
+        margin-right: auto;
+        margin-left: auto;
+        width: 50%;
+        justify-content: center;;
+        padding-top: 2rem;
+    }
+}
+
+.conversation__avatar{
+    padding-top: 0.5rem;
+    @include mixins.tablet{
+        padding-top: 1rem;
+    }
+    @include mixins.desktop{
+        padding-top: 2rem;
+    }
+}
+
+.conversation__image{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-self: flex-start;
+    object-fit: cover;
+    object-position: 30% center;
+    margin-right: 1rem;
+    @include mixins.tablet{
+        width:3rem;
+        height:3rem;
+    }
+    @include mixins.desktop{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+.form__container{
+    width: 80%;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+.conversation__form{
+    padding-bottom: 1rem;
+    width: 100%;
+
+    &--name, &--comment{
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.form__label{
+    margin-bottom: 0.3rem;
+
+
+    &--name, &--comment{
+        border-radius: 4px;
+        border: 1px solid $secondary-color2;
+    }
+    &--name{
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
+        
+        @include mixins.tablet{
+            padding-top: 0.8rem;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+            padding-bottom: 0.8rem;
+        }
+
+        @include mixins.desktop{
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 1rem;
+        }
+
+    }
+
+    &--comment{
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 5rem;
+
+        @include mixins.tablet{
+            padding-top: 0.8rem;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+            padding-bottom: 5rem;
+        }
+
+        @include mixins.desktop{
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 8rem;
+        }
+    }
+}
+
 // Font Weight, Font Styles and Font Size
 
-.hero, .section__heading, .about__description, .narrative__description, .about__description--artist{
+.hero, .about__description, .narrative__description, .about__description--artist{
     font-family: 'Avenir-Demi';
+}
+
+.form__label{
+    font-family: 'Avenir-Bold';
 }
 
 .hero__title{
@@ -258,15 +387,15 @@ body{
     }
 }
 
-.section__heading{
-    font-size: 1.5rem;
-    @include mixins.tablet{
-        font-size: 2.3rem;
-    }
-    @include mixins.laptop{
-        font-size: 3.65rem;
-    }
-}
+// .section__heading{
+//     font-size: 1.5rem;
+//     @include mixins.tablet{
+//         font-size: 2.3rem;
+//     }
+//     @include mixins.laptop{
+//         font-size: 3.65rem;
+//     }
+// }
 
 .about__description{
     font-size: 0.87rem;
@@ -315,8 +444,54 @@ body{
     }
 }
 
+.form__label{
+    font-size: 0.67rem;
+    @include mixins.tablet{
+        justify-content: flex-end;
+        font-size: 0.7rem;
+    }
+    @include mixins.laptop{
+        font-size: 1rem;
+    }
+}
+
+.form__label--name, .form__label--comment{
+    &::placeholder{
+        font-size: 0.7rem;
+        // font-family: 'Avenir-Demi';
+
+        @include mixins.tablet{
+            font-size: 0.8rem;
+        }
+        @include mixins.desktop{
+            font-size: 1.2rem;
+        }
+    }
+}
+
 // Font Color and Background Colour
+
+.gallery{
+    background-color: $secondary-color3;
+}
+
+
 
 .hero__title, .section__heading--footer{
     color: $primary-color3;
+}
+
+.form__label{
+    color: $primary-color2;
+
+    &--name, &--comment{
+        background-color: $secondary-color3
+    }
+
+}
+
+.form__label--name, .form__label--comment{
+    &::placeholder{
+        color: $primary-color1;
+    }
 }
