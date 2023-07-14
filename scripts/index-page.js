@@ -48,6 +48,3 @@ function createPostHistoryElement(pastComments) {
 
     return pastCommentEl;
 }
-
-console.log('hello');
-console.log(commentEl);
