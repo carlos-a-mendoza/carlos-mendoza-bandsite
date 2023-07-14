@@ -776,7 +776,6 @@ body {
 
 .form__container {
   width: 80%;
-  padding-bottom: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -808,14 +807,12 @@ button {
   border: 1px solid #E1E1E1;
 }
 .form__label--name {
-  padding-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
   .form__label--name {
-    padding-top: 0.8rem;
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     padding-bottom: 0.8rem;
@@ -823,7 +820,6 @@ button {
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
   .form__label--name {
-    padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -850,6 +846,69 @@ button {
     padding-right: 1rem;
     padding-bottom: 8rem;
   }
+}
+
+#comment-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  #comment-box {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1440px) {
+  #comment-box {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+.comment-log {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #E1E1E1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .comment-log {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1440px) {
+  .comment-log {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+.comment-log__name {
+  width: 40%;
+  padding-bottom: 0.5rem;
+  margin-right: rem;
+}
+.comment-log__comment {
+  width: 85%;
+  padding-bottom: 0.5rem;
+  line-height: 1.001rem;
+}
+.comment-log__image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 0.5rem;
 }
 
 .narrative__description, .about__description--artist {
@@ -977,6 +1036,17 @@ button {
   }
 }
 
+.comment-log__name {
+  font-weight: 700;
+}
+
+.comment-log__name, .comment-log__comment, .comment-log__time {
+  font-size: 0.78rem;
+}
+.comment-log__comment {
+  font-weight: 600;
+}
+
 .gallery {
   background-color: #FAFAFA;
 }
@@ -998,4 +1068,11 @@ button {
 
 .form__label--name::placeholder, .form__label--comment::placeholder {
   color: #323232;
+}
+
+.comment-log__name, .comment-log__comment {
+  color: #323232;
+}
+.comment-log__time {
+  color: #AFAFAF;
 }/*# sourceMappingURL=bio.css.map */
