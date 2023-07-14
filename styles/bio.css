@@ -718,10 +718,10 @@ body {
 }
 @media (min-width: 768px) {
   .conversation__container {
-    justify-content: center;
+    justify-content: flex-end;
     margin-left: auto;
     margin-right: auto;
-    width: 92%;
+    width: 80%;
     padding-top: 1rem;
   }
 }
@@ -782,6 +782,11 @@ body {
   align-items: flex-end;
   justify-content: flex-end;
 }
+@media (min-width: 768px) {
+  .form__container {
+    width: 85%;
+  }
+}
 
 .conversation__form {
   padding-bottom: 1rem;
@@ -816,6 +821,7 @@ button {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
@@ -823,6 +829,7 @@ button {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
+    padding-top: 1rem;
   }
 }
 .form__label--comment {
@@ -882,13 +889,13 @@ button {
 @media (min-width: 768px) {
   .comment-log {
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-bottom: 2rem;
+    width: 80%;
   }
 }
 @media (min-width: 1440px) {
   .comment-log {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    width: 50%;
   }
 }
 .comment-log__name {
@@ -897,9 +904,21 @@ button {
   margin-right: rem;
 }
 .comment-log__comment {
-  width: 85%;
+  width: 90%;
   padding-bottom: 0.5rem;
   line-height: 1.001rem;
+}
+@media (min-width: 768px) {
+  .comment-log__comment {
+    width: 94%;
+    line-height: 1.3rem;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .comment-log__comment {
+    width: 90%;
+    line-height: 2rem;
+  }
 }
 .comment-log__image {
   width: 2rem;
@@ -909,6 +928,19 @@ button {
      object-fit: cover;
   position: absolute;
   left: 0.5rem;
+}
+@media (min-width: 768px) {
+  .comment-log__image {
+    width: 2.8rem;
+    height: 2.8rem;
+    left: 0.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .comment-log__image {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 .narrative__description, .about__description--artist {
@@ -1042,6 +1074,16 @@ button {
 
 .comment-log__name, .comment-log__comment, .comment-log__time {
   font-size: 0.78rem;
+}
+@media (min-width: 768px) {
+  .comment-log__name, .comment-log__comment, .comment-log__time {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .comment-log__name, .comment-log__comment, .comment-log__time {
+    font-size: 1.37rem;
+  }
 }
 .comment-log__comment {
   font-weight: 600;

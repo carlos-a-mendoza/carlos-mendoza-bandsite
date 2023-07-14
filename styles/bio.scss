@@ -235,10 +235,11 @@ body{
     border-bottom: 1px solid $secondary-color2;
     margin-bottom: 1rem;
     @include mixins.tablet{
-        justify-content: center;
+        justify-content: flex-end;
         margin-left: auto;
         margin-right: auto;
-         width: 92%;
+        // width: 92%;
+        width: 80%;
         padding-top: 1rem;
     }
     @include mixins.desktop{
@@ -286,7 +287,13 @@ body{
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-
+    @include mixins.tablet{
+        width:85%;
+    }
+    // @include mixins.desktop{
+    //     width: 4rem;
+    //     height: 4rem;
+    // }
 }
 
 
@@ -324,12 +331,14 @@ button{
             padding-left: 0.8rem;
             padding-right: 0.8rem;
             padding-bottom: 0.8rem;
+            padding-top: 0.8rem;
         }
 
         @include mixins.desktop{
             padding-left: 1rem;
             padding-right: 1rem;
             padding-bottom: 1rem;
+            padding-top: 1rem;
         }
 
     }
@@ -387,12 +396,13 @@ button{
 
     @include mixins.tablet{
         padding-left: 2rem;
-        padding-right: 2rem;
+        padding-bottom: 2rem;
+        width: 80%;
+
     }
 
     @include mixins.laptop{
-        padding-left: 10rem;
-        padding-right: 10rem;
+        width: 50%;
     }
 
     &__name{
@@ -402,9 +412,17 @@ button{
         }
 
     &__comment{
-        width: 85%;
+        width: 90%;
         padding-bottom: 0.5rem;
         line-height: 1.001rem;;
+        @include mixins.tablet{
+            width: 94%;
+            line-height: 1.3rem;
+        }
+        @include mixins.desktop{
+            width: 90%;
+            line-height: 2rem;
+        }
     }
 
     &__image{
@@ -414,6 +432,17 @@ button{
         object-fit: cover;
         position: absolute;
         left: 0.5rem;
+
+        @include mixins.tablet{
+            width: 2.8rem;
+            height: 2.8rem;
+            left: 0.5rem;
+        }
+    
+        @include mixins.laptop{
+            width: 4rem;
+            height: 4rem;
+        }
 
     }
 
@@ -522,6 +551,13 @@ button{
 .comment-log {
     &__name, &__comment, &__time{
         font-size: 0.78rem;
+
+        @include mixins.tablet{
+            font-size: 0.8rem;
+        }
+        @include mixins.desktop{
+            font-size: 1.37rem;
+        }
     }
     &__comment{
         font-weight: 600;

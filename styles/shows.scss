@@ -59,6 +59,7 @@ body{
 
 .section__heading--hero, .hero__title{
     padding-left: 1rem;
+    padding-bottom: 1rem;
     width: 80%;
 }
 
@@ -70,12 +71,19 @@ body{
 
 // Font Weight, Font Styles and Font Size
 
-.hero, .section__heading{
-    font-family: 'Avenir-Demi';
+.section__heading--hero{
+    font-size: 0.82rem;
+    @include mixins.tablet{
+        font-size: 2.3rem;
+    }
+    @include mixins.laptop{
+        font-size: 4rem;
+    }
 }
 
 .hero__title{
     font-size: 1.5rem;
+    font-weight: 600;
     @include mixins.tablet{
         font-size: 3.85rem;   
     }
@@ -84,19 +92,6 @@ body{
     }
 }
 
-// .section__heading{
-//     font-size: 1.5rem;
-//     @include mixins.tablet{
-//         font-size: 2.3rem;
-//     }
-//     @include mixins.laptop{
-//         font-size: 3.65rem;
-//     }
-// }
-
-.section__heading--hero{
-    font-size: 0.9rem;
-}
 
 // Font Color and Background Colour
 

@@ -516,6 +516,7 @@ body {
 
 .section__heading--hero, .hero__title {
   padding-left: 1rem;
+  padding-bottom: 1rem;
   width: 80%;
 }
 
@@ -523,12 +524,23 @@ body {
   padding-left: 1rem;
 }
 
-.hero, .section__heading {
-  font-family: "Avenir-Demi";
+.section__heading--hero {
+  font-size: 0.82rem;
+}
+@media (min-width: 768px) {
+  .section__heading--hero {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 1440px) {
+  .section__heading--hero {
+    font-size: 4rem;
+  }
 }
 
 .hero__title {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -539,10 +551,6 @@ body {
   .hero__title {
     font-size: 6rem;
   }
-}
-
-.section__heading--hero {
-  font-size: 0.9rem;
 }
 
 .hero__title, .section__heading--hero {
