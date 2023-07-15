@@ -522,6 +522,22 @@ body {
 
 .shows {
   padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.band-event {
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #E1E1E1;
+}
+.band-event__heading {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.button--shows {
+  margin-top: 1rem;
 }
 
 .section__heading--hero {
@@ -553,6 +569,22 @@ body {
   }
 }
 
+.band-event__heading {
+  font-size: 0.6rem;
+}
+.band-event__date {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.band-event__venue, .band-event__location {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
 .hero__title, .section__heading--hero {
   color: #FFFFFF;
+}
+
+.band-event__heading {
+  color: #AFAFAF;
 }/*# sourceMappingURL=shows.css.map */

@@ -1,7 +1,7 @@
 @use './partials/global'; 
 @use './partials/mixins';
-@import './partials/typography';
 @import './partials/variables';
+@import './partials/typography';
 
 // Initial mobile device size at 320px
 
@@ -65,8 +65,24 @@ body{
 
 .shows{
     padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 
+.band-event{
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid $secondary-color2;
+
+    &__heading{
+        padding-top:1rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+.button--shows{
+    margin-top:1rem;
+}
 
 
 // Font Weight, Font Styles and Font Size
@@ -92,6 +108,21 @@ body{
     }
 }
 
+.band-event{
+    &__heading{
+        font-size: 0.6rem;
+    }
+
+    &__date{
+        font-size: 0.78rem;
+        font-weight: 700;
+    }
+
+    &__venue, &__location{
+        font-size: 0.78rem;
+        font-weight: 600;
+    }
+}
 
 // Font Color and Background Colour
 
@@ -99,4 +130,9 @@ body{
     color: $primary-color3;
 }
 
+.band-event{
+    &__heading{
+        color: $primary-color2;
+    }
+}
 

@@ -37,11 +37,17 @@ const showsEl = document.getElementById("shows");
 for (let i=0; i < concerts.length; i++){
     const showEventsEl = createShowListingElement(concerts[i]);
     showsEl.appendChild(showEventsEl);
+    // showEventsContainer.appendChild(showEventsHeading);
+    // showEventsContainer.appendChild(showEventsEl);
 }
 
 //Shows section will contain these details
 
 function createShowListingElement(concerts){
+
+    //Create a section element that will contain all of these elements for showEvent Element
+    //Include heading titles as well within these elements but display them as none until it reaches a certain width
+        //Heading titles for showEventEl will need to be hidden in response to the same media query as mentioned above
 
     const showEventsEl = document.createElement("article"); 
     showEventsEl.classList.add("band-event");
@@ -74,6 +80,7 @@ function createShowListingElement(concerts){
 
     const buttonEl = document.createElement("button");
     buttonEl.classList.add("button");
+    buttonEl.classList.add("button--shows");
     buttonEl.innerText = "BUY TICKETS";
 
     //This will be the order of how it is displayed in the box by default
@@ -86,4 +93,12 @@ function createShowListingElement(concerts){
     showEventsEl.appendChild(buttonEl);
 
     return showEventsEl;
+
+    // return showEventsContainer;
 }
+
+const showEventsHeading = document.createElement("h2");
+showEventsHeading.classList.add("section__heading");
+showEventsHeading.innerText = "Shows";
+
+showsEl.prepend(showEventsHeading);
