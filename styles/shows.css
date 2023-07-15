@@ -560,11 +560,12 @@ body {
   padding-bottom: 1rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #E1E1E1;
+  cursor: pointer;
 }
 .band-event:hover {
   background-color: #E1E1E1;
 }
-.band-event:active {
+.band-event:active, .band-event--active {
   background-color: #323232;
 }
 @media (min-width: 768px) {

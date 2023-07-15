@@ -103,12 +103,13 @@ body{
     padding-bottom: 1rem;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid $secondary-color2;
+    cursor: pointer;
 
     &:hover{
         background-color: $secondary-color2;
     }
 
-    &:active{
+    &:active, &--active{
         background-color: $primary-color1;
     }
 

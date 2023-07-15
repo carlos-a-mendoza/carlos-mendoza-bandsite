@@ -130,5 +130,19 @@ showsEl.prepend(showEventsTableHeadingContainer);
 showsEl.prepend(showEventsHeading);
 
 
+//When Event is selected Highlight Event and Give class
+
+const allConcertEvents = document.querySelectorAll(".band-event");
+for (let i = 0; i < allConcertEvents.length; i++) {
+    const concertEvent = allConcertEvents[i];
+
+    concertEvent.addEventListener("click", function(event) {
+        const activeConcert = document.querySelector(".band-event--active");
+        if (activeConcert && concertEvent !== activeConcert){
+            activeConcert.classList.remove("band-event--active");
+        }
+        concertEvent.classList.toggle("band-event--active");
+    });
+}
 
 
