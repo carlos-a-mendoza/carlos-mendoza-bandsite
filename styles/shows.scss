@@ -25,21 +25,20 @@ body{
 
     @include mixins.laptop{
         height: calc(0.55*100vw);
-
     }
 
     &__title{
         padding-left: 1rem;
+        padding-bottom: 0.1rem;
+        width: 80%;
 
         @include mixins.tablet{
-        padding-top: 0rem;
-        padding-left: 2rem;
+            padding-left: 2rem;
         }
 
         @include mixins.laptop{
-        padding-top: 0rem;
-        padding-left: 10rem;
-        padding-bottom: 3rem;
+            padding-left: 8rem;
+            width: 100%;
         }
         
     }
@@ -53,14 +52,42 @@ body{
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    @include mixins.desktop{
-        padding-bottom: 8rem;
+
+    @include mixins.laptop{
+        flex-direction: row;
+        align-items:center;
     }
-    
 }
 
+iframe{
+    width: 100%;
+    height: 100%;
+}
 
-.section__heading--hero, .hero__title{
+.iframe{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 40%;
+
+    @include mixins.tablet{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 65%;
+        height: 30%;
+    }
+
+    @include mixins.laptop{
+        width: 50%;
+        justify-self: flex-end;
+        height: 20%;
+        margin-top: 6rem;
+        padding-right: 8rem;
+    }
+        
+}
+
+.section__heading--hero{
     padding-left: 1rem;
     padding-bottom: 1rem;
     width: 80%;
@@ -191,7 +218,7 @@ body{
         font-size: 2.3rem;
     }
     @include mixins.laptop{
-        font-size: 4rem;
+        font-size: 2rem;
     }
 }
 
@@ -210,7 +237,7 @@ body{
         font-size: 3.85rem;   
     }
     @include mixins.laptop{
-        font-size: 6rem;   
+        font-size: 4rem;   
     }
 }
 

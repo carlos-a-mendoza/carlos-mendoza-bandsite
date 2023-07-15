@@ -21,11 +21,15 @@ const pastComments = [
 
 //Add all past comments to the comment element
 
-const commentEl = document.getElementById("comment-box");
-for (let i=0; i < pastComments.length; i++){
-    const pastCommentEl = createPostHistoryElement(pastComments[i]);
-    commentEl.appendChild(pastCommentEl);
+function displayComment(){
+    const commentEl = document.getElementById("comment-box");
+    for (let i=0; i < pastComments.length; i++){
+        const pastCommentEl = createPostHistoryElement(pastComments[i]);
+        commentEl.appendChild(pastCommentEl);
+    }
 }
+
+displayComment();
 
 // Comment section will contain these posts
 function createPostHistoryElement(pastComments) {
@@ -57,3 +61,38 @@ function createPostHistoryElement(pastComments) {
 
     return pastCommentEl;
 }
+// Form Event Listener
+
+const form = document.getElementById ("conversation__form");
+form.addEventListener("submit", (event) =>{
+    event.preventDefault();
+
+    const errorElement = document.querySelectorAll("form__error");
+    for (let i = 0; i < errorElement.length; i++) {
+        errorElement[i].classList.remove("form__error");
+    }
+
+    const name = event.target.name.value;
+    const comment = event.target.comment.value;
+
+    const todaysDate = new Date();
+    let day = todaysDate.getDate();
+    let month = todaysDate.getMonth() +1;
+    let year = todaysDate.getFullYear();
+    let presentDay = (month + "/" + day + "/" + year);
+
+    pastComments.unshift({
+        name: name,
+        timestamp: presentDay,
+        comment: comment,
+        imageSrc: "../assets/images/Mohan-muruge.jpg"
+    })
+    
+    const commentEl = document.getElementById("comment-box");
+    commentEl.innerHTML= "";
+
+    displayComment();
+
+    event.target.reset();
+
+})
