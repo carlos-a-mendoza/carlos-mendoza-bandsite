@@ -56,14 +56,17 @@ function createShowListingElement(concerts){
 
     const dateTitleEl = document.createElement("h3");
     dateTitleEl.classList.add("band-event__heading");
+    // dateTitleEl.classList.add("band-event__heading--table");
     dateTitleEl.innerText = "DATE";
 
     const venueTitleEl = document.createElement("h3");
     venueTitleEl.classList.add("band-event__heading");
+    // venueTitleEl.classList.add("band-event__heading--table");
     venueTitleEl.innerText = "VENUE";
 
     const locationTitleEl = document.createElement("h3");
     locationTitleEl.classList.add("band-event__heading");
+    // locationTitleEl.classList.add("band-event__heading--table");
     locationTitleEl.innerText = "LOCATION";
 
     const dateEl = document.createElement("p");
@@ -99,6 +102,33 @@ function createShowListingElement(concerts){
 
 const showEventsHeading = document.createElement("h2");
 showEventsHeading.classList.add("section__heading");
+showEventsHeading.classList.add("section__heading--shows")
 showEventsHeading.innerText = "Shows";
 
+const showEventsTableHeadingDate = document.createElement("h3");
+showEventsTableHeadingDate.classList.add("band-event__heading--table");
+showEventsTableHeadingDate.innerText = "DATE";
+
+const showEventsTableHeadingVenue = document.createElement("h3");
+showEventsTableHeadingVenue.classList.add("band-event__heading--table");
+showEventsTableHeadingVenue.innerText = "VENUE";
+
+const showEventsTableHeadingLocation = document.createElement("h3");
+showEventsTableHeadingLocation.classList.add("band-event__heading--table");
+showEventsTableHeadingLocation.innerText = "LOCATION";
+
+const showEventsTableHeadingContainer = document.createElement("article");
+showEventsTableHeadingContainer.classList.add("shows-heading__container");
+
+//Add Table Headings for Tablet, Desktop, DesktopXL view
+showEventsTableHeadingContainer.prepend(showEventsTableHeadingLocation);
+showEventsTableHeadingContainer.prepend(showEventsTableHeadingVenue);
+showEventsTableHeadingContainer.prepend(showEventsTableHeadingDate);
+
+//Add to Shows section
+showsEl.prepend(showEventsTableHeadingContainer);
 showsEl.prepend(showEventsHeading);
+
+
+
+

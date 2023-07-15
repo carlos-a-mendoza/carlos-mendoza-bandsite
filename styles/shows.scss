@@ -25,13 +25,14 @@ body{
 
     @include mixins.laptop{
         height: calc(0.55*100vw);
+
     }
 
     &__title{
         padding-left: 1rem;
 
         @include mixins.tablet{
-        padding-top: 3rem;
+        padding-top: 0rem;
         padding-left: 2rem;
         }
 
@@ -40,6 +41,7 @@ body{
         padding-left: 10rem;
         padding-bottom: 3rem;
         }
+        
     }
 }
 
@@ -57,16 +59,44 @@ body{
     
 }
 
+
 .section__heading--hero, .hero__title{
     padding-left: 1rem;
     padding-bottom: 1rem;
     width: 80%;
+
+    @include mixins.tablet{
+        padding-left: 2rem;
+    }
+
+
+    @include mixins.laptop{
+        padding-left: 8rem;
+    }
 }
 
 .shows{
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
+
+    @include mixins.tablet{
+        padding-left: 2rem;
+        padding-right: 2rem;    
+    }
+
+    @include mixins.laptop{
+        display:flex;
+        flex-direction: column;
+        padding-left: 8rem;
+        padding-right: 8rem;  
+    }
+}
+
+.section__heading--shows{
+    @include mixins.laptop{
+        padding-bottom: 0;
+    }
 }
 
 .band-event{
@@ -74,14 +104,81 @@ body{
     margin-bottom: 0.5rem;
     border-bottom: 1px solid $secondary-color2;
 
+    &:hover{
+        background-color: $secondary-color2;
+    }
+
+    &:active{
+        background-color: $primary-color1;
+    }
+
+    @include mixins.tablet{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @include mixins.laptop{
+        align-self: flex-end;
+        width: 80%;
+    }
+
+
     &__heading{
         padding-top:1rem;
         padding-bottom: 0.5rem;
+        
+        @include mixins.tablet{
+            display: none;
+        }
+    }
+
+    &__venue, &__date, &__location{
+        @include mixins.tablet{
+            padding-top: 2rem;
+        }
     }
 }
 
+.band-event__heading--table{
+    @include mixins.tablet{
+        padding-right: 10rem;
+    }
+    
+    @include mixins.laptop{
+        padding-right: 12rem;
+    }
+
+    @include mixins.desktop{
+        padding-right: 15.1rem;
+    }
+}
+
+.shows-heading__container{
+    display: none;
+
+    @include mixins.tablet{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    @include mixins.laptop{
+        justify-content: flex-end;
+        padding-right: 6.9rem;
+    }
+
+}
+
+
+
 .button--shows{
     margin-top:1rem;
+
+    @include mixins.tablet{
+        width: 20%;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
 }
 
 
@@ -94,6 +191,14 @@ body{
     }
     @include mixins.laptop{
         font-size: 4rem;
+    }
+}
+
+.section__heading--shows{
+    font-size: 1.7rem;
+
+    @include mixins.laptop{
+        font-size: 3rem;
     }
 }
 
@@ -116,13 +221,42 @@ body{
     &__date{
         font-size: 0.78rem;
         font-weight: 700;
+
+        @include mixins.tablet{
+            font-size: 0.8rem;
+        }
     }
 
     &__venue, &__location{
         font-size: 0.78rem;
         font-weight: 600;
+
+        @include mixins.tablet{
+            font-size: 0.8rem;
+        }
     }
 }
+
+.band-event__heading--table{
+    @include mixins.tablet{
+        font-size: 0.72rem;  
+    }
+    
+    @include mixins.laptop{
+        font-size: 0.8rem;
+    }
+    
+}
+
+.button--shows{
+    font-weight: 600;
+
+    @include mixins.tablet{
+        font-size: 0.8rem;
+    }
+}
+
+
 
 // Font Color and Background Colour
 
@@ -134,5 +268,9 @@ body{
     &__heading{
         color: $primary-color2;
     }
+}
+
+.band-event__heading--table{
+    color: $primary-color2
 }
 

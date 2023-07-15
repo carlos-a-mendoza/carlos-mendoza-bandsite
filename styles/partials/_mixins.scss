@@ -6,7 +6,7 @@
 
 //Laptop Media Query Added to ensure smooth transition (contact block doesnt increase in height)
 @mixin laptop {
-    @media (min-width: 1440px){
+    @media (min-width: 1280px){
         @content;
     }
 }
