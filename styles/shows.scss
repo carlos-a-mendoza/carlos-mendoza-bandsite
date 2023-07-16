@@ -23,7 +23,7 @@ body{
         height: calc(0.6*100vw);
     }
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         height: calc(0.55*100vw);
     }
 
@@ -36,7 +36,7 @@ body{
             padding-left: 2rem;
         }
 
-        @include mixins.laptop{
+        @include mixins.desktop{
             padding-left: 8rem;
             width: 100%;
         }
@@ -53,7 +53,7 @@ body{
     justify-content: flex-start;
     flex-direction: column;
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         align-items: center;
         flex-direction: row;
     }
@@ -73,11 +73,11 @@ iframe{
     @include mixins.tablet{
         padding-left: 2rem;
         padding-right: 2rem;
-        width: 65%;
-        height: 30%;
+        width: 60%;
+        height: 28%;
     }
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         width: 60%;
         justify-self: flex-end;
         height: 20%;
@@ -97,7 +97,7 @@ iframe{
     }
 
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-left: 8rem;
     }
 }
@@ -112,7 +112,7 @@ iframe{
         padding-right: 2rem;    
     }
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         display:flex;
         flex-direction: column;
         padding-left: 8rem;
@@ -121,7 +121,7 @@ iframe{
 }
 
 .section__heading--shows{
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-bottom: 0;
     }
 }
@@ -136,21 +136,41 @@ iframe{
         background-color: $secondary-color3;
     }
 
-    &:active, &--active{
+    &--active{
         background-color: $primary-color2;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @include mixins.desktop{
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @include mixins.desktopxl{
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+
+
+    }
+
+    @include mixins.tablet{
+        display: grid;
+        grid-template-columns: 28% 28% 25% 100%;
+    }
+
+    @include mixins.desktop{
+        align-self: flex-end;
+        width: 80%;
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
-    @include mixins.tablet{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    @include mixins.laptop{
-        align-self: flex-end;
-        width: 80%;
+    @include mixins.desktopxl{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
 
@@ -166,21 +186,8 @@ iframe{
     &__venue, &__date, &__location{
         @include mixins.tablet{
             padding-top: 2rem;
+            text-align: left;;
         }
-    }
-}
-
-.band-event__heading--table{
-    @include mixins.tablet{
-        padding-right: 10rem;
-    }
-    
-    @include mixins.laptop{
-        padding-right: 12rem;
-    }
-
-    @include mixins.desktop{
-        padding-right: 15.1rem;
     }
 }
 
@@ -189,25 +196,29 @@ iframe{
 
     @include mixins.tablet{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
+        width: 65%;
     }
 
-    @include mixins.laptop{
-        justify-content: flex-end;
-        padding-right: 6.9rem;
+    @include mixins.desktop{
+        width: 50%;
+        margin-left: 13.8rem;
+    }
+
+    @include mixins.desktopxl{
+        margin-left: 22.7rem;
+        width: 48.5%;
     }
 
 }
-
-
 
 .button--shows{
     margin-top:1rem;
 
     @include mixins.tablet{
         width: 20%;
-        padding-top: 0.4rem;
-        padding-bottom: 0.4rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
     }
 }
 
@@ -219,7 +230,7 @@ iframe{
     @include mixins.tablet{
         font-size: 2.3rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 2rem;
     }
 }
@@ -227,7 +238,7 @@ iframe{
 .section__heading--shows{
     font-size: 1.7rem;
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 3rem;
     }
 }
@@ -238,12 +249,13 @@ iframe{
     @include mixins.tablet{
         font-size: 3.85rem;   
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 4rem;   
     }
 }
 
 .band-event{
+
     &__heading{
         font-size: 0.6rem;
     }
@@ -253,7 +265,15 @@ iframe{
         font-weight: 700;
 
         @include mixins.tablet{
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        @include mixins.desktop{
+            font-size: 1rem;
+        }
+
+        @include mixins.desktopxl{
+            font-size: 1.5rem;
         }
     }
 
@@ -262,9 +282,19 @@ iframe{
         font-weight: 600;
 
         @include mixins.tablet{
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        @include mixins.desktop{
+            font-size: 1rem;
+        }
+
+        @include mixins.desktopxl{
+            font-size: 1.5rem;
         }
     }
+
+
 }
 
 .band-event__heading--table{
@@ -272,8 +302,12 @@ iframe{
         font-size: 0.72rem;  
     }
     
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 0.8rem;
+    }
+    
+    @include mixins.desktopxl{
+        font-size: 1.1rem;
     }
     
 }
@@ -283,6 +317,10 @@ iframe{
 
     @include mixins.tablet{
         font-size: 0.8rem;
+    }
+
+    @include mixins.desktopxl{
+        font-size: 1rem;
     }
 }
 

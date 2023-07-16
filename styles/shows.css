@@ -143,7 +143,7 @@ li, a, button {
     padding-bottom: 1.5rem;
   }
 }
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1500px) {
   .section__heading {
     padding-top: 4rem;
     padding-bottom: 2rem;
@@ -257,7 +257,7 @@ footer {
     padding-right: 4rem;
   }
 }
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1500px) {
   .contact {
     padding-right: 10rem;
   }
@@ -273,14 +273,14 @@ footer {
     order: -1;
   }
 }
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1500px) {
   .company__container {
     padding-top: 4.5rem;
     order: -1;
   }
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1500px) {
   .company__heading {
     padding: 0;
   }
@@ -363,7 +363,7 @@ footer {
 .button {
   font-size: 1rem;
 }
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1500px) {
   .button {
     font-size: 1.3rem;
   }
@@ -530,8 +530,8 @@ iframe {
   .iframe {
     padding-left: 2rem;
     padding-right: 2rem;
-    width: 65%;
-    height: 30%;
+    width: 60%;
+    height: 28%;
   }
 }
 @media (min-width: 1280px) {
@@ -595,22 +595,43 @@ iframe {
 .band-event:hover {
   background-color: #FAFAFA;
 }
-.band-event:active, .band-event--active {
+.band-event--active {
   background-color: #AFAFAF;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media (min-width: 1280px) {
+  .band-event--active {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1500px) {
+  .band-event--active {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
 @media (min-width: 768px) {
   .band-event {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 28% 28% 25% 100%;
   }
 }
 @media (min-width: 1280px) {
   .band-event {
     align-self: flex-end;
     width: 80%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 1500px) {
+  .band-event {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 .band-event__heading {
@@ -625,22 +646,7 @@ iframe {
 @media (min-width: 768px) {
   .band-event__venue, .band-event__date, .band-event__location {
     padding-top: 2rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .band-event__heading--table {
-    padding-right: 10rem;
-  }
-}
-@media (min-width: 1280px) {
-  .band-event__heading--table {
-    padding-right: 12rem;
-  }
-}
-@media (min-width: 1441px) and (max-width: 1920px) {
-  .band-event__heading--table {
-    padding-right: 15.1rem;
+    text-align: left;
   }
 }
 
@@ -650,13 +656,20 @@ iframe {
 @media (min-width: 768px) {
   .shows-heading__container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: 65%;
   }
 }
 @media (min-width: 1280px) {
   .shows-heading__container {
-    justify-content: flex-end;
-    padding-right: 6.9rem;
+    width: 50%;
+    margin-left: 13.8rem;
+  }
+}
+@media (min-width: 1500px) {
+  .shows-heading__container {
+    margin-left: 22.7rem;
+    width: 48.5%;
   }
 }
 
@@ -666,8 +679,8 @@ iframe {
 @media (min-width: 768px) {
   .button--shows {
     width: 20%;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
   }
 }
 
@@ -718,7 +731,17 @@ iframe {
 }
 @media (min-width: 768px) {
   .band-event__date {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1280px) {
+  .band-event__date {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1500px) {
+  .band-event__date {
+    font-size: 1.5rem;
   }
 }
 .band-event__venue, .band-event__location {
@@ -727,7 +750,17 @@ iframe {
 }
 @media (min-width: 768px) {
   .band-event__venue, .band-event__location {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1280px) {
+  .band-event__venue, .band-event__location {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1500px) {
+  .band-event__venue, .band-event__location {
+    font-size: 1.5rem;
   }
 }
 
@@ -741,6 +774,11 @@ iframe {
     font-size: 0.8rem;
   }
 }
+@media (min-width: 1500px) {
+  .band-event__heading--table {
+    font-size: 1.1rem;
+  }
+}
 
 .button--shows {
   font-weight: 600;
@@ -748,6 +786,11 @@ iframe {
 @media (min-width: 768px) {
   .button--shows {
     font-size: 0.8rem;
+  }
+}
+@media (min-width: 1500px) {
+  .button--shows {
+    font-size: 1rem;
   }
 }
 

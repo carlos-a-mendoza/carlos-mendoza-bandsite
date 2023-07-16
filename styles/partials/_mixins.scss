@@ -1,11 +1,12 @@
-@mixin desktop {
-    @media (min-width: 1441px) and (max-width:1920px){
+//Added desktopxl media query to ensure smooth transition 
+
+@mixin desktopxl {
+    @media (min-width: 1500px){
         @content;
     }
 }
 
-//Laptop Media Query Added to ensure smooth transition (contact block doesnt increase in height)
-@mixin laptop {
+@mixin desktop{
     @media (min-width: 1280px){
         @content;
     }

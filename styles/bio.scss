@@ -23,7 +23,7 @@ body{
         height: calc(0.6*100vw);
     }
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         height: calc(0.55*100vw);
     }
 
@@ -35,7 +35,7 @@ body{
         padding-left: 2rem;
         }
 
-        @include mixins.laptop{
+        @include mixins.desktop{
         padding-top: 0rem;
         padding-left: 10rem;
         padding-bottom: 3rem;
@@ -49,7 +49,7 @@ body{
     height: 100%;
     display: flex;
     align-items: center;
-    @include mixins.desktop{
+    @include mixins.desktopxl{
         padding-bottom: 8rem;
     }
 }
@@ -63,7 +63,7 @@ body{
         padding-right: 2rem;
     }
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-left: 10rem;
         padding-right: 10rem;
     }
@@ -74,7 +74,7 @@ body{
         padding-left: 2rem;
         padding-right: 0.5rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-left: 10rem;
         padding-right: 10rem;
     }
@@ -106,10 +106,11 @@ body{
         padding-top: 2rem;
         line-height: 1.8rem;
     }
-    @include mixins.laptop{
-        padding-right: 17rem;
+    @include mixins.desktop{
+        padding-right: 4rem;
         line-height: 2.5rem;
-    }@include mixins.desktop{
+    }@include mixins.desktopxl{
+        padding-right: 17rem;
         padding-top: 3rem;
         line-height: 3rem;
     }
@@ -122,10 +123,10 @@ body{
         width: 80%;
         padding-top: 1rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-top: 1.5rem;
     }
-    @include mixins.desktop{
+    @include mixins.desktopxl{
         padding-top: 2rem;
     }
 }
@@ -147,10 +148,10 @@ body{
         padding-top: 3rem;
         padding-bottom: 1rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-top: 4rem;
     }
-    @include mixins.desktop{
+    @include mixins.desktopxl{
         padding-top: 5rem;
         padding-bottom: 2rem;
     }
@@ -174,7 +175,7 @@ body{
         line-height: 1.2rem;
         letter-spacing: 0.0001rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         line-height: 2rem;
         letter-spacing: 0rem;
     }
@@ -184,7 +185,7 @@ body{
     @include mixins.tablet{
         padding-right:1rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-right:1.5rem;
     }
 }
@@ -193,7 +194,7 @@ body{
     @include mixins.tablet{
         padding-left:1rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-left:1.5rem;
     }
 }
@@ -206,7 +207,7 @@ body{
         padding-left: 2rem;
         padding-right: 0.5rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-left: 10rem;
         padding-right: 10rem;
     }
@@ -222,7 +223,7 @@ body{
         padding-bottom: 1.2rem;
         padding-right: 1.4rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-bottom: 2rem;
         padding-right: 2rem;
     }
@@ -241,7 +242,7 @@ body{
         width: 80%;
         padding-top: 1rem;
     }
-    @include mixins.desktop{
+    @include mixins.desktopxl{
         margin-right: auto;
         margin-left: auto;
         width: 60%;
@@ -255,7 +256,7 @@ body{
     @include mixins.tablet{
         padding-top: 1rem;
     }
-    @include mixins.desktop{
+    @include mixins.desktopxl{
         padding-top: 2rem;
     }
 }
@@ -272,15 +273,16 @@ body{
     @include mixins.tablet{
         width:3rem;
         height:3rem;
+        margin-right: 1.8rem;
     }
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         width: 4rem;
         height: 4rem;
         margin-right: 3rem;
     }
 
-    @include mixins.desktop{
+    @include mixins.desktopxl{
         width: 4rem;
         height: 4rem;
     }
@@ -294,20 +296,8 @@ body{
     align-items: flex-end;
     justify-content: flex-end;
     @include mixins.tablet{
-        width:85%;
+        width:90%;
     }
-
-    @include mixins.tablet{
-        width: 85%;
-    }
-
-
-
-
-    // @include mixins.desktop{
-    //     width: 4rem;
-    //     height: 4rem;
-    // }
 }
 
 
@@ -348,7 +338,7 @@ button{
             padding-top: 0.8rem;
         }
 
-        @include mixins.desktop{
+        @include mixins.desktopxl{
             padding-left: 1rem;
             padding-right: 1rem;
             padding-bottom: 1rem;
@@ -370,7 +360,7 @@ button{
             padding-bottom: 5rem;
         }
 
-        @include mixins.desktop{
+        @include mixins.desktopxl{
             padding-top: 1rem;
             padding-left: 1rem;
             padding-right: 1rem;
@@ -391,7 +381,7 @@ button{
         padding-right: 2rem;
     }
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         padding-left: 10rem;
         padding-right: 10rem;
     }
@@ -415,11 +405,11 @@ button{
 
     }
 
-    @include mixins.laptop{
+    @include mixins.desktop{
         width: 80%;
     }
 
-    @include mixins.desktop{
+    @include mixins.desktopxl{
         width: 60%;
     }
 
@@ -432,11 +422,11 @@ button{
             margin-right: 13.8rem;
         }
 
-        @include mixins.laptop{
+        @include mixins.desktop{
             margin-right: 17.4rem
         }
 
-        @include mixins.desktop{
+        @include mixins.desktopxl{
             margin-right: 21.5rem;
         }
 
@@ -451,11 +441,11 @@ button{
             line-height: 1.3rem;
         }
 
-        @include mixins.laptop{
+        @include mixins.desktop{
             width: 89%
         }
 
-        @include mixins.desktop{
+        @include mixins.desktopxl{
             width: 90%;
             line-height: 2rem;
         }
@@ -475,7 +465,7 @@ button{
             left: 0.5rem;
         }
     
-        @include mixins.laptop{
+        @include mixins.desktop{
             width: 4rem;
             height: 4rem;
         }
@@ -503,7 +493,7 @@ button{
     @include mixins.tablet{
         font-size: 3.85rem;   
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 6rem;   
     }
 }
@@ -514,7 +504,7 @@ button{
     @include mixins.tablet{
         font-size: 1.3rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 2.1rem;
     }
 
@@ -525,7 +515,7 @@ button{
             font-size: 1.036rem;
         }
 
-        @include mixins.laptop{
+        @include mixins.desktop{
             font-size: 1.62rem;
         }
     }
@@ -537,7 +527,7 @@ button{
     @include mixins.tablet{
         font-size: 1.4rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 2.4rem;
     }
 }
@@ -547,10 +537,10 @@ button{
     @include mixins.tablet{
         font-size: 0.815rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 1.379rem;
     }
-    @include mixins.desktop{
+    @include mixins.desktopxl{
         font-size: 1.28rem;
     }
 }
@@ -561,7 +551,7 @@ button{
         justify-content: flex-end;
         font-size: 0.7rem;
     }
-    @include mixins.laptop{
+    @include mixins.desktop{
         font-size: 1rem;
     }
 }
@@ -574,8 +564,13 @@ button{
         @include mixins.tablet{
             font-size: 0.8rem;
         }
+
         @include mixins.desktop{
-            font-size: 1.2rem;
+            font-size: 1rem;
+        }
+
+        @include mixins.desktopxl{
+            font-size: 1.37rem;
         }
     }
 }
@@ -592,11 +587,11 @@ button{
             font-size: 0.8rem;
         }
 
-        @include mixins.laptop{
+        @include mixins.desktop{
             font-size: 1rem
         }
 
-        @include mixins.desktop{
+        @include mixins.desktopxl{
             font-size: 1.37rem;
         }
     }
