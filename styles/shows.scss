@@ -133,11 +133,13 @@ iframe{
     cursor: pointer;
 
     &:hover{
-        background-color: $secondary-color2;
+        background-color: $secondary-color3;
     }
 
     &:active, &--active{
-        background-color: $primary-color1;
+        background-color: $primary-color2;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     @include mixins.tablet{

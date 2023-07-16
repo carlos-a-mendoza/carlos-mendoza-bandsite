@@ -238,14 +238,13 @@ body{
         justify-content: flex-end;
         margin-left: auto;
         margin-right: auto;
-        // width: 92%;
         width: 80%;
         padding-top: 1rem;
     }
     @include mixins.desktop{
         margin-right: auto;
         margin-left: auto;
-        width: 50%;
+        width: 60%;
         justify-content: center;;
         padding-top: 2rem;
     }
@@ -274,6 +273,13 @@ body{
         width:3rem;
         height:3rem;
     }
+
+    @include mixins.laptop{
+        width: 4rem;
+        height: 4rem;
+        margin-right: 3rem;
+    }
+
     @include mixins.desktop{
         width: 4rem;
         height: 4rem;
@@ -290,6 +296,14 @@ body{
     @include mixins.tablet{
         width:85%;
     }
+
+    @include mixins.tablet{
+        width: 85%;
+    }
+
+
+
+
     // @include mixins.desktop{
     //     width: 4rem;
     //     height: 4rem;
@@ -402,13 +416,30 @@ button{
     }
 
     @include mixins.laptop{
-        width: 50%;
+        width: 80%;
+    }
+
+    @include mixins.desktop{
+        width: 60%;
     }
 
     &__name{
         width:40%;
         padding-bottom: 0.5rem;
-        margin-right: rem;
+        margin-right: 3.8rem;
+
+        @include mixins.tablet{
+            margin-right: 13.8rem;
+        }
+
+        @include mixins.laptop{
+            margin-right: 17.4rem
+        }
+
+        @include mixins.desktop{
+            margin-right: 21.5rem;
+        }
+
         }
 
     &__comment{
@@ -419,6 +450,11 @@ button{
             width: 94%;
             line-height: 1.3rem;
         }
+
+        @include mixins.laptop{
+            width: 89%
+        }
+
         @include mixins.desktop{
             width: 90%;
             line-height: 2rem;
@@ -555,6 +591,11 @@ button{
         @include mixins.tablet{
             font-size: 0.8rem;
         }
+
+        @include mixins.laptop{
+            font-size: 1rem
+        }
+
         @include mixins.desktop{
             font-size: 1.37rem;
         }

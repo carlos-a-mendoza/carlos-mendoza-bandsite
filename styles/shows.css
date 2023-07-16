@@ -593,10 +593,12 @@ iframe {
   cursor: pointer;
 }
 .band-event:hover {
-  background-color: #E1E1E1;
+  background-color: #FAFAFA;
 }
 .band-event:active, .band-event--active {
-  background-color: #323232;
+  background-color: #AFAFAF;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media (min-width: 768px) {
   .band-event {

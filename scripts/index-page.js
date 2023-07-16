@@ -77,7 +77,7 @@ form.addEventListener("submit", (event) =>{
 
     const todaysDate = new Date();
     let day = todaysDate.getDate();
-    let month = todaysDate.getMonth() +1;
+    let month = ("0"+(todaysDate.getMonth() +1));
     let year = todaysDate.getFullYear();
     let presentDay = (month + "/" + day + "/" + year);
 
