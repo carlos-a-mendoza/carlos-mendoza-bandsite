@@ -326,6 +326,12 @@ button{
         border-radius: 4px;
         border: 1px solid $secondary-color2;
     }
+
+    &--error{
+        border-radius: 4px;
+        border: 1px solid $error-color1; 
+    }
+
     &--name{
         padding-left: 0.5rem;
         padding-right: 0.5rem;

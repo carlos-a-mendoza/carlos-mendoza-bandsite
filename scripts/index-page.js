@@ -42,16 +42,16 @@ function createPostHistoryElement(pastComments) {
     imageEl.setAttribute("src", pastComments.imageSrc);
     imageEl.setAttribute("alt", pastComments.name + " icon")
 
-    const nameEl = document.createElement('h3');
+    const nameEl = document.createElement("h3");
     nameEl.classList.add("comment-log__name");
     nameEl.innerText =  pastComments.name;
 
-    const timeEl = document.createElement('p');
-    timeEl.classList.add('comment-log__time');
+    const timeEl = document.createElement("p");
+    timeEl.classList.add("comment-log__time");
     timeEl.innerText = pastComments.timestamp;
 
-    const commentEl = document.createElement('p');
-    commentEl.classList.add('comment-log__comment');
+    const commentEl = document.createElement("p");
+    commentEl.classList.add("comment-log__comment");
     commentEl.innerText = pastComments.comment;
 
     pastCommentEl.appendChild(nameEl);
@@ -67,13 +67,37 @@ const form = document.getElementById ("conversation__form");
 form.addEventListener("submit", (event) =>{
     event.preventDefault();
 
-    const errorElement = document.querySelectorAll("form__error");
+
+
+    const errorElement = document.querySelectorAll(".form__label--error");
     for (let i = 0; i < errorElement.length; i++) {
-        errorElement[i].classList.remove("form__error");
+        errorElement[i].classList.remove("form__label--error");
     }
 
     const name = event.target.name.value;
     const comment = event.target.comment.value;
+
+    //Errors in Name or Comment (Red Border)
+
+    let errorsExist = false
+
+    if (name === "") {
+        errorsExist = true;
+        alert("Invalid Name. Please type your name");
+        const errorsExistName = document.querySelector(".form__label--name");
+        errorsExistName.classList.add("form__label--error");
+    }
+
+    if(comment === "") {
+        errorsExist = true;
+        alert("Invalid Comment. Please type your comment");
+        const errorsExistComment = document.querySelector(".form__label--comment");
+        errorsExistComment.classList.add("form__label--error")
+    }
+
+    if (errorsExist === true){
+        return;
+    }
 
     const todaysDate = new Date();
     let day = todaysDate.getDate();
