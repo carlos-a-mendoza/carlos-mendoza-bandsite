@@ -37,36 +37,25 @@ const showsEl = document.getElementById("shows");
 for (let i=0; i < concerts.length; i++){
     const showEventsEl = createShowListingElement(concerts[i]);
     showsEl.appendChild(showEventsEl);
-    // showEventsContainer.appendChild(showEventsHeading);
-    // showEventsContainer.appendChild(showEventsEl);
 }
 
 //Shows section will contain these details
 
 function createShowListingElement(concerts){
 
-    //Create a section element that will contain all of these elements for showEvent Element
-    //Include heading titles as well within these elements but display them as none until it reaches a certain width
-        //Heading titles for showEventEl will need to be hidden in response to the same media query as mentioned above
-
     const showEventsEl = document.createElement("article"); 
     showEventsEl.classList.add("band-event");
 
-    //add headings as a child to the concert element
-
     const dateTitleEl = document.createElement("h3");
     dateTitleEl.classList.add("band-event__heading");
-    // dateTitleEl.classList.add("band-event__heading--table");
     dateTitleEl.innerText = "DATE";
 
     const venueTitleEl = document.createElement("h3");
     venueTitleEl.classList.add("band-event__heading");
-    // venueTitleEl.classList.add("band-event__heading--table");
     venueTitleEl.innerText = "VENUE";
 
     const locationTitleEl = document.createElement("h3");
     locationTitleEl.classList.add("band-event__heading");
-    // locationTitleEl.classList.add("band-event__heading--table");
     locationTitleEl.innerText = "LOCATION";
 
     const dateEl = document.createElement("p");
@@ -86,7 +75,6 @@ function createShowListingElement(concerts){
     buttonEl.classList.add("button--shows");
     buttonEl.innerText = "BUY TICKETS";
 
-    //This will be the order of how it is displayed in the box by default
     showEventsEl.appendChild(dateTitleEl);
     showEventsEl.appendChild(dateEl);
     showEventsEl.appendChild(venueTitleEl);
@@ -97,7 +85,6 @@ function createShowListingElement(concerts){
 
     return showEventsEl;
 
-    // return showEventsContainer;
 }
 
 const showEventsHeading = document.createElement("h2");

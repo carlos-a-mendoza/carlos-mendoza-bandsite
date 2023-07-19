@@ -1,4 +1,4 @@
-//Added desktopxl media query to ensure smooth transition 
+//Added desktopxl media query to ensure smooth transition given a max dimension of 1920px
 
 @mixin desktopxl {
     @media (min-width: 1500px){

@@ -67,8 +67,6 @@ const form = document.getElementById ("conversation__form");
 form.addEventListener("submit", (event) =>{
     event.preventDefault();
 
-
-
     const errorElement = document.querySelectorAll(".form__label--error");
     for (let i = 0; i < errorElement.length; i++) {
         errorElement[i].classList.remove("form__label--error");

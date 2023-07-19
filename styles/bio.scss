@@ -300,7 +300,6 @@ body{
     }
 }
 
-
 .conversation__form{
     padding-bottom: 1rem;
     width: 100%;
@@ -320,7 +319,6 @@ button{
 
 .form__label{
     margin-bottom: 0.3rem;
-
 
     &--name, &--comment{
         border-radius: 4px;
@@ -350,7 +348,6 @@ button{
             padding-bottom: 1rem;
             padding-top: 1rem;
         }
-
     }
 
     &--comment{
@@ -435,7 +432,6 @@ button{
         @include mixins.desktopxl{
             margin-right: 21.5rem;
         }
-
         }
 
     &__comment{
@@ -475,9 +471,7 @@ button{
             width: 4rem;
             height: 4rem;
         }
-
     }
-
 }
 
 // Font Weight, Font Styles and Font Size
