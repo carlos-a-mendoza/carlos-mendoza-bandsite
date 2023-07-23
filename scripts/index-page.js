@@ -98,15 +98,7 @@ form.addEventListener("submit", (event) =>{
     .then(response => {
         const newComment = response.data
         console.log(newComment);
-
-
-        
-
-        const commentListElement = document.getElementById("comment-box");
-        // displayComments(commentListElement, allComments);
-        commentListElement.prepend(newComment);
-
-        accessUpdatedCommentListData()
+        accessUpdatedCommentListData();
 
     })
 
