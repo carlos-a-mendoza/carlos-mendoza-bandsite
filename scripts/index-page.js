@@ -94,46 +94,41 @@ form.addEventListener("submit", (event) =>{
     console.log(errorsExist);
    
     axios 
-     .post(baseURL + "/comments" + apiKey, newComment)
-     .then(response => {
-        const allComments = response.data
-        console.log(allComments);
+    .post(baseURL + "/comments" + apiKey, newComment)
+    .then(response => {
+        const newComment = response.data
+        console.log(newComment);
+
+
+        
 
         const commentListElement = document.getElementById("comment-box");
-        displayComments(commentListElement, allComments);
+        // displayComments(commentListElement, allComments);
+        commentListElement.prepend(newComment);
 
-     })
+        accessUpdatedCommentListData()
+
+    })
 
      .catch(error =>{
         console.error("Error from posting a comment: ", error)
-     })
+    })
 
+    event.target.reset();
 
 })
 
+function accessUpdatedCommentListData(){
+    axios
+        .get(baseURL + "/comments" + apiKey)
+        .then(res =>{
+            console.log(res.data);
 
-//BEFORE AXIOS
- const todaysDate = new Date();
-    let day = todaysDate.getDate();
-    let month = ("0"+(todaysDate.getMonth() +1));
-    let year = todaysDate.getFullYear();
-    let presentDay = (month + "/" + day + "/" + year);
-
-    publishedComment.unshift({
-        name: name,
-        timestamp: timestamp,
-        comment: comment,
-        imageSrc: "../assets/images/Mohan-muruge.jpg"
-    })
-
-
-
-
-
-//AFTER AXIOS ERROR BRACKETS
-// const commentEl = document.getElementById("comment-box");
-    // commentEl.innerHTML= "";
-
-    // displayComments();
-
-    // event.target.reset();
+            const commentListElement = document.getElementById("comment-box");
+            displayComments(commentListElement, res.data);
+        })
+        .catch(error =>{
+            console.error("Error: cannot obtain updated list of comments ", error);
+        })
+        
+}
