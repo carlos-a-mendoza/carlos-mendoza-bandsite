@@ -1,47 +1,25 @@
-const concerts = [
-    {
-        date: "Mon Sept 06 2021",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA",
-    },
-    {
-        date: "Tue Sept 21 2021",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA",
-    },
-    {
-        date: "Fri Oct 15 2021",
-        venue: "View Lounge",
-        location: "San Francisco, CA",
-    },
-    {
-        date: "Sat Nov 06 2021",
-        venue: "Hyatt Agency ",
-        location: "San Francisco, CA",
-    },
-    {
-        date: "Fri Nov 26 2021",
-        venue: "Moscow Center",
-        location: "San Francisco, CA",
-    },
-    {
-        date: "Wed Dec 15 2021",
-        venue: "Press Club",
-        location: "San Francisco, CA",
-    },
-]
+const baseURL = "https://project-1-api.herokuapp.com";
+const apiKey = "?api_key=46aad9a0-7a68-4a02-ac6e-086c8ab3ad37"
+const showsListElement = document.getElementById("shows")
 
-//Add all concerts to the shows element
+axios
+    .get(baseURL +"/showdates" + apiKey)
+    .then(res => {
+        const allShows = res.data
+        console.log(allShows);
+        displayFutureShows(showsListElement, allShows);
+    })
 
-const showsEl = document.getElementById("shows");
-for (let i=0; i < concerts.length; i++){
-    const showEventsEl = createShowListingElement(concerts[i]);
-    showsEl.appendChild(showEventsEl);
-}
+    .catch(error => {
+        console.error ("Error: " + "Error retrieving user data", error);
+    })
 
 //Shows section will contain these details
 
-function createShowListingElement(concerts){
+function displayFutureShows(listOfShows, shows){
+    
+    //Each Show will contain these elements
+    shows.forEach((showEvent) =>{
 
     const showEventsEl = document.createElement("article"); 
     showEventsEl.classList.add("band-event");
@@ -60,15 +38,18 @@ function createShowListingElement(concerts){
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("band-event__date");
-    dateEl.innerText = concerts.date;
+    const date = new Date(showEvent.date);
+    const desiredDateDisplay = date.toLocaleDateString(undefined,{weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+    //Note: Leaving the function above as undefined, the date will be based on the user's local settings/region
+    dateEl.innerText = desiredDateDisplay;
 
     const venueEl = document.createElement("p");
     venueEl.classList.add("band-event__venue");
-    venueEl.innerText = concerts.venue;
+    venueEl.innerText = showEvent.place;
 
     const locationEl = document.createElement("p");
     locationEl.classList.add("band-event__location");
-    locationEl.innerText = concerts.location;
+    locationEl.innerText = showEvent.location;
 
     const buttonEl = document.createElement("button");
     buttonEl.classList.add("button");
@@ -83,10 +64,12 @@ function createShowListingElement(concerts){
     showEventsEl.appendChild(locationEl);
     showEventsEl.appendChild(buttonEl);
 
-    return showEventsEl;
+    listOfShows.appendChild(showEventsEl);
 
+    })
 }
 
+//Table Headings for Tablet, Desktop, DesktopXL view
 const showEventsHeading = document.createElement("h2");
 showEventsHeading.classList.add("section__heading");
 showEventsHeading.classList.add("section__heading--shows")
@@ -107,17 +90,16 @@ showEventsTableHeadingLocation.innerText = "LOCATION";
 const showEventsTableHeadingContainer = document.createElement("article");
 showEventsTableHeadingContainer.classList.add("shows-heading__container");
 
-//Add Table Headings for Tablet, Desktop, DesktopXL view
+
 showEventsTableHeadingContainer.prepend(showEventsTableHeadingLocation);
 showEventsTableHeadingContainer.prepend(showEventsTableHeadingVenue);
 showEventsTableHeadingContainer.prepend(showEventsTableHeadingDate);
 
-//Add to Shows section
-showsEl.prepend(showEventsTableHeadingContainer);
-showsEl.prepend(showEventsHeading);
+showsListElement.prepend(showEventsTableHeadingContainer);
+showsListElement.prepend(showEventsHeading);
 
 
-//When Event is selected Highlight Event and Give class
+//Below is code that will indicate to users their selected show through addition/removal of class
 
 const allConcertEvents = document.querySelectorAll(".band-event");
 for (let i = 0; i < allConcertEvents.length; i++) {
