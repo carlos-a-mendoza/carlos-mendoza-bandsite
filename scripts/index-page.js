@@ -6,8 +6,11 @@ axios
     .then(res =>{
         const allComments = res.data;
         console.log(allComments);
-        const commentListElement = document.getElementById("comment-box"); //container for comments
+        const commentListElement = document.getElementById("comment-box");
         displayComments(commentListElement, allComments);
+
+        console.log(allComments.sort(organizeCommentsByMostRecentDate));
+        
     })
 
     .catch(error =>{
@@ -15,7 +18,7 @@ axios
     });
 
 function displayComments(commentList, comments){
-    commentList.innerHTML = ""; //THIS WILL REPLACE COMMENTS WITH AN UPDATED VERSION 
+    commentList.innerHTML = "";
 
     //Create the elements for both the existing and new comments
     comments.forEach((comment) =>{
@@ -46,7 +49,7 @@ function displayComments(commentList, comments){
         commentEl.innerText = comment.comment;
         publishedComment.appendChild(commentEl);
     
-        commentList.appendChild(publishedComment);
+        commentList.prepend(publishedComment);
     });
 }
 
@@ -99,15 +102,13 @@ form.addEventListener("submit", (event) =>{
         const newComment = response.data
         console.log(newComment);
         accessUpdatedCommentListData();
-
     })
 
-     .catch(error =>{
+    .catch(error =>{
         console.error("Error from posting a comment: ", error)
     })
 
     event.target.reset();
-
 })
 
 function accessUpdatedCommentListData(){
@@ -115,12 +116,25 @@ function accessUpdatedCommentListData(){
         .get(baseURL + "/comments" + apiKey)
         .then(res =>{
             console.log(res.data);
+            let allUpdatedComments = res.data;
+            commentList = allUpdatedComments;
 
             const commentListElement = document.getElementById("comment-box");
-            displayComments(commentListElement, res.data);
+            displayComments(commentListElement, allUpdatedComments);
+
+            allUpdatedComments.sort(organizeCommentsByMostRecentDate);
+            console.log(allUpdatedComments);
         })
+    
         .catch(error =>{
             console.error("Error: cannot obtain updated list of comments ", error);
         })
-        
 }
+
+function organizeCommentsByMostRecentDate(a,b){
+    const timestampA = a.timestamp;
+    const timestampB = b.timestamp;
+    return timestampB - timestampA;
+}
+
+
