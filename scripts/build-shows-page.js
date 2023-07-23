@@ -8,6 +8,20 @@ axios
         const allShows = res.data
         console.log(allShows);
         displayFutureShows(showsListElement, allShows);
+
+        //Below is code that will indicate to users their selected show through addition/removal of class
+        const allConcertEvents = document.querySelectorAll(".band-event");
+        for (let i = 0; i < allConcertEvents.length; i++) {
+            const concertEvent = allConcertEvents[i];
+
+            concertEvent.addEventListener("click", function(event) {
+            const activeConcert = document.querySelector(".band-event--active");
+            if (activeConcert && concertEvent !== activeConcert){
+                activeConcert.classList.remove("band-event--active");
+            }
+            concertEvent.classList.toggle("band-event--active");
+            });
+        }
     })
 
     .catch(error => {
@@ -65,7 +79,6 @@ function displayFutureShows(listOfShows, shows){
     showEventsEl.appendChild(buttonEl);
 
     listOfShows.appendChild(showEventsEl);
-
     })
 }
 
@@ -90,28 +103,10 @@ showEventsTableHeadingLocation.innerText = "LOCATION";
 const showEventsTableHeadingContainer = document.createElement("article");
 showEventsTableHeadingContainer.classList.add("shows-heading__container");
 
-
 showEventsTableHeadingContainer.prepend(showEventsTableHeadingLocation);
 showEventsTableHeadingContainer.prepend(showEventsTableHeadingVenue);
 showEventsTableHeadingContainer.prepend(showEventsTableHeadingDate);
 
 showsListElement.prepend(showEventsTableHeadingContainer);
 showsListElement.prepend(showEventsHeading);
-
-
-//Below is code that will indicate to users their selected show through addition/removal of class
-
-const allConcertEvents = document.querySelectorAll(".band-event");
-for (let i = 0; i < allConcertEvents.length; i++) {
-    const concertEvent = allConcertEvents[i];
-
-    concertEvent.addEventListener("click", function(event) {
-        const activeConcert = document.querySelector(".band-event--active");
-        if (activeConcert && concertEvent !== activeConcert){
-            activeConcert.classList.remove("band-event--active");
-        }
-        concertEvent.classList.toggle("band-event--active");
-    });
-}
-
 
