@@ -209,7 +209,7 @@ footer{
 
 .contact{
     @include mixins.desktop{
-        padding-right: 4rem;
+        padding-right: 2rem;
     }
     @include mixins.desktopxl{
         padding-right: 10rem;
@@ -313,9 +313,12 @@ footer{
         font-size: 0.82rem;
     }
     @include mixins.desktop{
-        font-size: 1.38rem;
+        font-size: 1.3rem;
         line-height: 1.8rem;
         letter-spacing: 0.001rem;
+    }
+    @include mixins.desktopxl{
+        font-size: 1.38rem;
     }
 }
 
@@ -326,9 +329,12 @@ footer{
         font-size: 0.81rem;
     }
     @include mixins.desktop{
-        font-size: 1.37rem;
+        font-size: 1.2rem;
         line-height: 1.8rem;
         padding-top: 2.5rem;
+    }
+    @include mixins.desktopxl{
+        font-size: 1.37rem;
     }
 }
 

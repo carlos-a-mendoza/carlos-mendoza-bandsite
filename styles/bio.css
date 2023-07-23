@@ -254,7 +254,7 @@ footer {
 
 @media (min-width: 1280px) {
   .contact {
-    padding-right: 4rem;
+    padding-right: 2rem;
   }
 }
 @media (min-width: 1500px) {
@@ -380,9 +380,14 @@ footer {
 }
 @media (min-width: 1280px) {
   .contact__name {
-    font-size: 1.38rem;
+    font-size: 1.3rem;
     line-height: 1.8rem;
     letter-spacing: 0.001rem;
+  }
+}
+@media (min-width: 1500px) {
+  .contact__name {
+    font-size: 1.38rem;
   }
 }
 
@@ -396,9 +401,14 @@ footer {
 }
 @media (min-width: 1280px) {
   .contact__info, .contact__email {
-    font-size: 1.37rem;
+    font-size: 1.2rem;
     line-height: 1.8rem;
     padding-top: 2.5rem;
+  }
+}
+@media (min-width: 1500px) {
+  .contact__info, .contact__email {
+    font-size: 1.37rem;
   }
 }
 
