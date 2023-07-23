@@ -603,7 +603,7 @@ iframe {
   cursor: pointer;
 }
 .band-event:hover {
-  background-color: #FAFAFA;
+  background-color: #E1E1E1;
 }
 .band-event--active {
   background-color: #AFAFAF;
