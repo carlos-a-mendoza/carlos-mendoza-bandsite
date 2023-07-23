@@ -20,7 +20,7 @@ axios
 function displayComments(commentList, comments){
     commentList.innerHTML = "";
 
-    //Create the elements for both the existing and new comments
+    //Creation of elements for both the existing and new comments
     comments.forEach((comment) =>{
 
         const publishedComment = document.createElement("article");
