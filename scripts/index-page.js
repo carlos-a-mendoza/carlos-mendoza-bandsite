@@ -28,7 +28,7 @@ function displayComments(commentList, comments){
     
         const imageEl = document.createElement("img");
         imageEl.classList.add("comment-log__image");
-        imageEl.setAttribute("src", "../assets/images/Mohan-muruge.jpg");
+        imageEl.setAttribute("src", "assets/images/Mohan-muruge.jpg");
         imageEl.setAttribute("alt", comment.name + " icon");
         publishedComment.appendChild(imageEl);
     
