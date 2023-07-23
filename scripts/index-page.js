@@ -40,7 +40,8 @@ function displayComments(commentList, comments){
         const timeEl = document.createElement("p");
         timeEl.classList.add("comment-log__time");
         const date = new Date(comment.timestamp);
-        const desiredDateDisplay = date.toLocaleDateString();
+        const desiredDateDisplay = date.toLocaleDateString(undefined, {month: "2-digit", day: "2-digit", year: "numeric" });
+        //Note: Leaving the function above as undefined, the date will be based on the user's local settings/region
         timeEl.innerText = desiredDateDisplay;
         publishedComment.appendChild(timeEl);
     
